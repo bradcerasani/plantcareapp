@@ -7,6 +7,7 @@
 //
 
 #import "PlantCollectionViewController.h"
+#import "PlantDetailsViewController.h"
 #import "PlantCollectionViewCell.h"
 
 @interface PlantCollectionViewController () <NSFetchedResultsControllerDelegate, UICollectionViewDataSource, UICollectionViewDelegate>
@@ -16,19 +17,6 @@
 @end
 
 @implementation PlantCollectionViewController
-
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-    }
-    return self;
-}
-
-- (void)awakeFromNib
-{
-    
-}
 
 - (void)viewDidLoad
 {
@@ -131,8 +119,15 @@
 {
     if ([[segue identifier] isEqualToString:@"PlantSegue"])
     {
-#warning Incomplete implementation
+        Plant *plant = nil;
+        if ([sender isKindOfClass:[UICollectionViewCell class]])
+        {
+            UICollectionViewCell *cell = (UICollectionViewCell *)sender;
+            plant = [_fetchedResultsController objectAtIndexPath:[self.collectionView indexPathForCell:cell]];
+        }
         // Pass Plant object to destination VC if sender == collectionView
+        PlantDetailsViewController *detailsViewController = segue.destinationViewController;
+        detailsViewController.plant = plant;
     }
 }
 

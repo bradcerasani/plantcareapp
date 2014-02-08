@@ -35,6 +35,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    // Load image from sandbox for photo
+    _photoButton.imageView.image = [UIImage imageNamed:@""];
+    
+    _plantNameTextField.text = _plant.plantName;
 }
 
 - (void)didReceiveMemoryWarning
