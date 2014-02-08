@@ -38,6 +38,8 @@
 		BEE0EBC218A6CEAD007F0F1C /* PlantCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BEE0EBC018A6CEAD007F0F1C /* PlantCollectionViewCell.m */; };
 		BEE0EBC418A6D156007F0F1C /* missing_image@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BEE0EBC318A6D156007F0F1C /* missing_image@2x.png */; };
 		BEE0EBC518A6D156007F0F1C /* missing_image@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BEE0EBC318A6D156007F0F1C /* missing_image@2x.png */; };
+		BEE0EBCC18A6D7D9007F0F1C /* PlantAppModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BEE0EBCA18A6D7D9007F0F1C /* PlantAppModel.xcdatamodeld */; };
+		BEE0EBCD18A6D7D9007F0F1C /* PlantAppModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BEE0EBCA18A6D7D9007F0F1C /* PlantAppModel.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +80,7 @@
 		BEE0EBBF18A6CEAD007F0F1C /* PlantCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlantCollectionViewCell.h; sourceTree = "<group>"; };
 		BEE0EBC018A6CEAD007F0F1C /* PlantCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlantCollectionViewCell.m; sourceTree = "<group>"; };
 		BEE0EBC318A6D156007F0F1C /* missing_image@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "missing_image@2x.png"; sourceTree = "<group>"; };
+		BEE0EBCB18A6D7D9007F0F1C /* PlantAppModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PlantAppModel.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -239,6 +242,7 @@
 		BEE0EBC918A6D614007F0F1C /* Core Data Model */ = {
 			isa = PBXGroup;
 			children = (
+				BEE0EBCA18A6D7D9007F0F1C /* PlantAppModel.xcdatamodeld */,
 			);
 			name = "Core Data Model";
 			sourceTree = "<group>";
@@ -380,6 +384,7 @@
 				BEDF2B22189DB67500B20C80 /* AppDelegate.m in Sources */,
 				BEDF2B1E189DB67500B20C80 /* main.m in Sources */,
 				BEDF2B64189DBF0500B20C80 /* PlantDetailsViewController.m in Sources */,
+				BEE0EBCC18A6D7D9007F0F1C /* PlantAppModel.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -400,6 +405,7 @@
 				BEDF2B4C189DB68E00B20C80 /* AppDelegate.m in Sources */,
 				BEDF2B4D189DB68E00B20C80 /* main.m in Sources */,
 				BEDF2B65189DBF0500B20C80 /* PlantDetailsViewController.m in Sources */,
+				BEE0EBCD18A6D7D9007F0F1C /* PlantAppModel.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -663,6 +669,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		BEE0EBCA18A6D7D9007F0F1C /* PlantAppModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				BEE0EBCB18A6D7D9007F0F1C /* PlantAppModel.xcdatamodel */,
+			);
+			currentVersion = BEE0EBCB18A6D7D9007F0F1C /* PlantAppModel.xcdatamodel */;
+			path = PlantAppModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = BEDF2B06189DB67500B20C80 /* Project object */;
 }
