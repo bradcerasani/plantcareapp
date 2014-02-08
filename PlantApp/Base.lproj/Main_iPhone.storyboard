@@ -183,9 +183,10 @@
                                             <constraint firstAttribute="height" constant="30" id="J1Q-K3-Ktx"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                         <connections>
                                             <action selector="onPlantNameEdit:" destination="pxl-gS-O7S" eventType="editingDidEnd" id="ylI-rU-MRd"/>
+                                            <outlet property="delegate" destination="pxl-gS-O7S" id="Vls-VY-ewi"/>
                                         </connections>
                                     </textField>
                                 </subviews>
@@ -225,7 +226,6 @@
                         <outlet property="fertilizerButton" destination="Qby-Kc-kXd" id="SLX-P6-WDV"/>
                         <outlet property="lightButton" destination="O4l-XL-Gz3" id="occ-FI-VlR"/>
                         <outlet property="mistButton" destination="ygN-gi-Kvh" id="zGa-3P-Bdo"/>
-                        <outlet property="onPhotoButtonTap" destination="Jg5-tm-1pU" id="Ryg-gP-rCK"/>
                         <outlet property="photoButton" destination="Jg5-tm-1pU" id="lbf-aj-CWZ"/>
                         <outlet property="plantNameTextField" destination="Svf-zb-mxi" id="81F-ZP-hyd"/>
                         <outlet property="waterButton" destination="pXt-dN-dC0" id="ThG-cw-kKX"/>

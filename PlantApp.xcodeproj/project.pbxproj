@@ -153,8 +153,6 @@
 				BEDF2B5D189DBE4B00B20C80 /* View Controllers */,
 				BEDF2B20189DB67500B20C80 /* AppDelegate.h */,
 				BEDF2B21189DB67500B20C80 /* AppDelegate.m */,
-				BEDF2B23189DB67500B20C80 /* Main_iPhone.storyboard */,
-				BEDF2B26189DB67500B20C80 /* Main_iPad.storyboard */,
 				BEDF2B2C189DB67500B20C80 /* Images.xcassets */,
 				BEDF2B18189DB67500B20C80 /* Supporting Files */,
 			);
@@ -194,7 +192,9 @@
 		BEDF2B5C189DB6FA00B20C80 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				BEE0EBC918A6D614007F0F1C /* Core Data Model */,
 				BEE0EBC618A6D24B007F0F1C /* Images */,
+				BEE0EBC818A6D606007F0F1C /* Storyboards */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -225,6 +225,22 @@
 				BEE0EBC318A6D156007F0F1C /* missing_image@2x.png */,
 			);
 			name = Images;
+			sourceTree = "<group>";
+		};
+		BEE0EBC818A6D606007F0F1C /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				BEDF2B23189DB67500B20C80 /* Main_iPhone.storyboard */,
+				BEDF2B26189DB67500B20C80 /* Main_iPad.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		BEE0EBC918A6D614007F0F1C /* Core Data Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Core Data Model";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -412,6 +428,7 @@
 				BEDF2B24189DB67500B20C80 /* Base */,
 			);
 			name = Main_iPhone.storyboard;
+			path = ../PlantApp;
 			sourceTree = "<group>";
 		};
 		BEDF2B26189DB67500B20C80 /* Main_iPad.storyboard */ = {
@@ -420,6 +437,7 @@
 				BEDF2B27189DB67500B20C80 /* Base */,
 			);
 			name = Main_iPad.storyboard;
+			path = ../PlantApp;
 			sourceTree = "<group>";
 		};
 		BEDF2B3C189DB67500B20C80 /* InfoPlist.strings */ = {

@@ -8,7 +8,8 @@
 
 #import "PlantDetailsViewController.h"
 
-@interface PlantDetailsViewController ()
+@interface PlantDetailsViewController () <UITextFieldDelegate>
+
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *doneButton;
 @property (weak, nonatomic) IBOutlet UIImageView *backgroundImageView;
 @property (weak, nonatomic) IBOutlet UIButton *photoButton;
@@ -51,26 +52,44 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - UITextFieldDelegate
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    return YES;
+}
+
+#pragma mark - IBActions
+
 - (IBAction)onDoneButtonTap:(id)sender
 {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
-- (IBAction)onPhotoButtonTap:(id)sender {
+- (IBAction)onPhotoButtonTap:(id)sender
+{
 }
 
-- (IBAction)onPlantNameEdit:(id)sender {
+- (IBAction)onPlantNameEdit:(id)sender
+{
+    NSLog(@"plant name: %@", _plantNameTextField.text);
 }
 
-- (IBAction)onLightButtonTap:(id)sender {
+- (IBAction)onLightButtonTap:(id)sender
+{
 }
 
-- (IBAction)onWaterButtonTap:(id)sender {
+- (IBAction)onWaterButtonTap:(id)sender
+{
 }
 
-- (IBAction)onMistButtonTap:(id)sender {
+- (IBAction)onMistButtonTap:(id)sender
+{
 }
 
-- (IBAction)onFertilizerButtonTap:(id)sender {
+- (IBAction)onFertilizerButtonTap:(id)sender
+{
 }
+
 @end
