@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  PlantCollectionViewController.h
 //  PlantApp
 //
 //  Created by Rudi Strahl on 2/1/2014.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface PlantCollectionViewController : UICollectionViewController
 
 @end

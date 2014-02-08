@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>PlantApp Test.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 		<key>PlantApp.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -18,6 +23,11 @@
 			<true/>
 		</dict>
 		<key>BEDF2B31189DB67500B20C80</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>BEDF2B49189DB68E00B20C80</key>
 		<dict>
 			<key>primary</key>
 			<true/>

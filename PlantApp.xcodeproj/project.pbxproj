@@ -15,13 +15,29 @@
 		BEDF2B22189DB67500B20C80 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BEDF2B21189DB67500B20C80 /* AppDelegate.m */; };
 		BEDF2B25189DB67500B20C80 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEDF2B23189DB67500B20C80 /* Main_iPhone.storyboard */; };
 		BEDF2B28189DB67500B20C80 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEDF2B26189DB67500B20C80 /* Main_iPad.storyboard */; };
-		BEDF2B2B189DB67500B20C80 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEDF2B2A189DB67500B20C80 /* ViewController.m */; };
 		BEDF2B2D189DB67500B20C80 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEDF2B2C189DB67500B20C80 /* Images.xcassets */; };
 		BEDF2B34189DB67500B20C80 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEDF2B33189DB67500B20C80 /* XCTest.framework */; };
 		BEDF2B35189DB67500B20C80 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEDF2B11189DB67500B20C80 /* Foundation.framework */; };
 		BEDF2B36189DB67500B20C80 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEDF2B15189DB67500B20C80 /* UIKit.framework */; };
 		BEDF2B3E189DB67500B20C80 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BEDF2B3C189DB67500B20C80 /* InfoPlist.strings */; };
 		BEDF2B40189DB67500B20C80 /* PlantAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BEDF2B3F189DB67500B20C80 /* PlantAppTests.m */; };
+		BEDF2B4C189DB68E00B20C80 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BEDF2B21189DB67500B20C80 /* AppDelegate.m */; };
+		BEDF2B4D189DB68E00B20C80 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BEDF2B1D189DB67500B20C80 /* main.m */; };
+		BEDF2B4F189DB68E00B20C80 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEDF2B13189DB67500B20C80 /* CoreGraphics.framework */; };
+		BEDF2B50189DB68E00B20C80 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEDF2B15189DB67500B20C80 /* UIKit.framework */; };
+		BEDF2B51189DB68E00B20C80 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEDF2B11189DB67500B20C80 /* Foundation.framework */; };
+		BEDF2B53189DB68E00B20C80 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEDF2B26189DB67500B20C80 /* Main_iPad.storyboard */; };
+		BEDF2B54189DB68E00B20C80 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEDF2B2C189DB67500B20C80 /* Images.xcassets */; };
+		BEDF2B55189DB68E00B20C80 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEDF2B23189DB67500B20C80 /* Main_iPhone.storyboard */; };
+		BEDF2B56189DB68E00B20C80 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BEDF2B1A189DB67500B20C80 /* InfoPlist.strings */; };
+		BEDF2B60189DBEA700B20C80 /* PlantCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEDF2B5F189DBEA700B20C80 /* PlantCollectionViewController.m */; };
+		BEDF2B61189DBEA700B20C80 /* PlantCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEDF2B5F189DBEA700B20C80 /* PlantCollectionViewController.m */; };
+		BEDF2B64189DBF0500B20C80 /* PlantDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEDF2B63189DBF0500B20C80 /* PlantDetailsViewController.m */; };
+		BEDF2B65189DBF0500B20C80 /* PlantDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEDF2B63189DBF0500B20C80 /* PlantDetailsViewController.m */; };
+		BEE0EBC118A6CEAD007F0F1C /* PlantCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BEE0EBC018A6CEAD007F0F1C /* PlantCollectionViewCell.m */; };
+		BEE0EBC218A6CEAD007F0F1C /* PlantCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BEE0EBC018A6CEAD007F0F1C /* PlantCollectionViewCell.m */; };
+		BEE0EBC418A6D156007F0F1C /* missing_image@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BEE0EBC318A6D156007F0F1C /* missing_image@2x.png */; };
+		BEE0EBC518A6D156007F0F1C /* missing_image@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BEE0EBC318A6D156007F0F1C /* missing_image@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,14 +63,21 @@
 		BEDF2B21189DB67500B20C80 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		BEDF2B24189DB67500B20C80 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
 		BEDF2B27189DB67500B20C80 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
-		BEDF2B29189DB67500B20C80 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		BEDF2B2A189DB67500B20C80 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		BEDF2B2C189DB67500B20C80 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		BEDF2B32189DB67500B20C80 /* PlantAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlantAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEDF2B33189DB67500B20C80 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		BEDF2B3B189DB67500B20C80 /* PlantAppTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PlantAppTests-Info.plist"; sourceTree = "<group>"; };
 		BEDF2B3D189DB67500B20C80 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		BEDF2B3F189DB67500B20C80 /* PlantAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlantAppTests.m; sourceTree = "<group>"; };
+		BEDF2B5A189DB68E00B20C80 /* PlantApp Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PlantApp Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BEDF2B5B189DB68E00B20C80 /* PlantAppTest-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "PlantAppTest-Info.plist"; path = "/Users/rudistrahl/Source/iOS/PlantApp/PlantAppTest-Info.plist"; sourceTree = "<absolute>"; };
+		BEDF2B5E189DBEA700B20C80 /* PlantCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlantCollectionViewController.h; sourceTree = "<group>"; };
+		BEDF2B5F189DBEA700B20C80 /* PlantCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlantCollectionViewController.m; sourceTree = "<group>"; };
+		BEDF2B62189DBF0500B20C80 /* PlantDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlantDetailsViewController.h; sourceTree = "<group>"; };
+		BEDF2B63189DBF0500B20C80 /* PlantDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlantDetailsViewController.m; sourceTree = "<group>"; };
+		BEE0EBBF18A6CEAD007F0F1C /* PlantCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlantCollectionViewCell.h; sourceTree = "<group>"; };
+		BEE0EBC018A6CEAD007F0F1C /* PlantCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlantCollectionViewCell.m; sourceTree = "<group>"; };
+		BEE0EBC318A6D156007F0F1C /* missing_image@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "missing_image@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +101,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BEDF2B4E189DB68E00B20C80 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BEDF2B4F189DB68E00B20C80 /* CoreGraphics.framework in Frameworks */,
+				BEDF2B50189DB68E00B20C80 /* UIKit.framework in Frameworks */,
+				BEDF2B51189DB68E00B20C80 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -86,6 +119,7 @@
 			children = (
 				BEDF2B17189DB67500B20C80 /* PlantApp */,
 				BEDF2B39189DB67500B20C80 /* PlantAppTests */,
+				BEDF2B5C189DB6FA00B20C80 /* Resources */,
 				BEDF2B10189DB67500B20C80 /* Frameworks */,
 				BEDF2B0F189DB67500B20C80 /* Products */,
 			);
@@ -96,6 +130,7 @@
 			children = (
 				BEDF2B0E189DB67500B20C80 /* PlantApp.app */,
 				BEDF2B32189DB67500B20C80 /* PlantAppTests.xctest */,
+				BEDF2B5A189DB68E00B20C80 /* PlantApp Test.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -114,12 +149,12 @@
 		BEDF2B17189DB67500B20C80 /* PlantApp */ = {
 			isa = PBXGroup;
 			children = (
+				BEE0EBBE18A6CE94007F0F1C /* Views */,
+				BEDF2B5D189DBE4B00B20C80 /* View Controllers */,
 				BEDF2B20189DB67500B20C80 /* AppDelegate.h */,
 				BEDF2B21189DB67500B20C80 /* AppDelegate.m */,
 				BEDF2B23189DB67500B20C80 /* Main_iPhone.storyboard */,
 				BEDF2B26189DB67500B20C80 /* Main_iPad.storyboard */,
-				BEDF2B29189DB67500B20C80 /* ViewController.h */,
-				BEDF2B2A189DB67500B20C80 /* ViewController.m */,
 				BEDF2B2C189DB67500B20C80 /* Images.xcassets */,
 				BEDF2B18189DB67500B20C80 /* Supporting Files */,
 			);
@@ -130,6 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				BEDF2B19189DB67500B20C80 /* PlantApp-Info.plist */,
+				BEDF2B5B189DB68E00B20C80 /* PlantAppTest-Info.plist */,
 				BEDF2B1A189DB67500B20C80 /* InfoPlist.strings */,
 				BEDF2B1D189DB67500B20C80 /* main.m */,
 				BEDF2B1F189DB67500B20C80 /* PlantApp-Prefix.pch */,
@@ -153,6 +189,42 @@
 				BEDF2B3C189DB67500B20C80 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BEDF2B5C189DB6FA00B20C80 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BEE0EBC618A6D24B007F0F1C /* Images */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		BEDF2B5D189DBE4B00B20C80 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BEDF2B5E189DBEA700B20C80 /* PlantCollectionViewController.h */,
+				BEDF2B5F189DBEA700B20C80 /* PlantCollectionViewController.m */,
+				BEDF2B62189DBF0500B20C80 /* PlantDetailsViewController.h */,
+				BEDF2B63189DBF0500B20C80 /* PlantDetailsViewController.m */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		BEE0EBBE18A6CE94007F0F1C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BEE0EBBF18A6CEAD007F0F1C /* PlantCollectionViewCell.h */,
+				BEE0EBC018A6CEAD007F0F1C /* PlantCollectionViewCell.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		BEE0EBC618A6D24B007F0F1C /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				BEE0EBC318A6D156007F0F1C /* missing_image@2x.png */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,6 +265,23 @@
 			productReference = BEDF2B32189DB67500B20C80 /* PlantAppTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		BEDF2B49189DB68E00B20C80 /* PlantAppTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BEDF2B57189DB68E00B20C80 /* Build configuration list for PBXNativeTarget "PlantAppTest" */;
+			buildPhases = (
+				BEDF2B4A189DB68E00B20C80 /* Sources */,
+				BEDF2B4E189DB68E00B20C80 /* Frameworks */,
+				BEDF2B52189DB68E00B20C80 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PlantAppTest;
+			productName = PlantApp;
+			productReference = BEDF2B5A189DB68E00B20C80 /* PlantApp Test.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -202,6 +291,9 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Rudi Strahl";
 				TargetAttributes = {
+					BEDF2B0D189DB67500B20C80 = {
+						DevelopmentTeam = 6WCTGTPC8V;
+					};
 					BEDF2B31189DB67500B20C80 = {
 						TestTargetID = BEDF2B0D189DB67500B20C80;
 					};
@@ -221,6 +313,7 @@
 			projectRoot = "";
 			targets = (
 				BEDF2B0D189DB67500B20C80 /* PlantApp */,
+				BEDF2B49189DB68E00B20C80 /* PlantAppTest */,
 				BEDF2B31189DB67500B20C80 /* PlantAppTests */,
 			);
 		};
@@ -231,6 +324,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BEE0EBC418A6D156007F0F1C /* missing_image@2x.png in Resources */,
 				BEDF2B28189DB67500B20C80 /* Main_iPad.storyboard in Resources */,
 				BEDF2B2D189DB67500B20C80 /* Images.xcassets in Resources */,
 				BEDF2B25189DB67500B20C80 /* Main_iPhone.storyboard in Resources */,
@@ -246,6 +340,18 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BEDF2B52189DB68E00B20C80 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BEE0EBC518A6D156007F0F1C /* missing_image@2x.png in Resources */,
+				BEDF2B53189DB68E00B20C80 /* Main_iPad.storyboard in Resources */,
+				BEDF2B54189DB68E00B20C80 /* Images.xcassets in Resources */,
+				BEDF2B55189DB68E00B20C80 /* Main_iPhone.storyboard in Resources */,
+				BEDF2B56189DB68E00B20C80 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -253,9 +359,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BEDF2B2B189DB67500B20C80 /* ViewController.m in Sources */,
+				BEDF2B60189DBEA700B20C80 /* PlantCollectionViewController.m in Sources */,
+				BEE0EBC118A6CEAD007F0F1C /* PlantCollectionViewCell.m in Sources */,
 				BEDF2B22189DB67500B20C80 /* AppDelegate.m in Sources */,
 				BEDF2B1E189DB67500B20C80 /* main.m in Sources */,
+				BEDF2B64189DBF0500B20C80 /* PlantDetailsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,6 +372,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				BEDF2B40189DB67500B20C80 /* PlantAppTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BEDF2B4A189DB68E00B20C80 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BEDF2B61189DBEA700B20C80 /* PlantCollectionViewController.m in Sources */,
+				BEE0EBC218A6CEAD007F0F1C /* PlantCollectionViewCell.m in Sources */,
+				BEDF2B4C189DB68E00B20C80 /* AppDelegate.m in Sources */,
+				BEDF2B4D189DB68E00B20C80 /* main.m in Sources */,
+				BEDF2B65189DBF0500B20C80 /* PlantDetailsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -392,6 +512,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PlantApp/PlantApp-Prefix.pch";
 				INFOPLIST_FILE = "PlantApp/PlantApp-Info.plist";
@@ -405,6 +526,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PlantApp/PlantApp-Prefix.pch";
 				INFOPLIST_FILE = "PlantApp/PlantApp-Info.plist";
@@ -455,6 +577,34 @@
 			};
 			name = Release;
 		};
+		BEDF2B58189DB68E00B20C80 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PlantApp/PlantApp-Prefix.pch";
+				INFOPLIST_FILE = "PlantAppTest-Info.plist";
+				PRODUCT_NAME = "PlantApp Test";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		BEDF2B59189DB68E00B20C80 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PlantApp/PlantApp-Prefix.pch";
+				INFOPLIST_FILE = "PlantAppTest-Info.plist";
+				PRODUCT_NAME = "PlantApp Test";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -474,6 +624,7 @@
 				BEDF2B45189DB67500B20C80 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BEDF2B46189DB67500B20C80 /* Build configuration list for PBXNativeTarget "PlantAppTests" */ = {
 			isa = XCConfigurationList;
@@ -482,6 +633,16 @@
 				BEDF2B48189DB67500B20C80 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BEDF2B57189DB68E00B20C80 /* Build configuration list for PBXNativeTarget "PlantAppTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BEDF2B58189DB68E00B20C80 /* Debug */,
+				BEDF2B59189DB68E00B20C80 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
