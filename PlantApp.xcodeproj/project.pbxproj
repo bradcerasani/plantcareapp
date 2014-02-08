@@ -44,6 +44,14 @@
 		BEE0EBD218A6D9E9007F0F1C /* RSCoreDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEE0EBD018A6D9E9007F0F1C /* RSCoreDataController.m */; };
 		BEE0EBD518A6DA28007F0F1C /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = BEE0EBD418A6DA28007F0F1C /* Constants.m */; };
 		BEE0EBD618A6DA28007F0F1C /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = BEE0EBD418A6DA28007F0F1C /* Constants.m */; };
+		BEE0EBD818A6DC27007F0F1C /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEE0EBD718A6DC27007F0F1C /* CoreData.framework */; };
+		BEE0EBD918A6DC35007F0F1C /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEE0EBD718A6DC27007F0F1C /* CoreData.framework */; };
+		BEE0EBDC18A6E0A2007F0F1C /* RSCoreDataController+PlantApp.m in Sources */ = {isa = PBXBuildFile; fileRef = BEE0EBDB18A6E0A2007F0F1C /* RSCoreDataController+PlantApp.m */; };
+		BEE0EBDD18A6E0A2007F0F1C /* RSCoreDataController+PlantApp.m in Sources */ = {isa = PBXBuildFile; fileRef = BEE0EBDB18A6E0A2007F0F1C /* RSCoreDataController+PlantApp.m */; };
+		BEE0EBEA18A6E5E7007F0F1C /* _Plant.m in Sources */ = {isa = PBXBuildFile; fileRef = BEE0EBE718A6E5E7007F0F1C /* _Plant.m */; };
+		BEE0EBEB18A6E5E7007F0F1C /* _Plant.m in Sources */ = {isa = PBXBuildFile; fileRef = BEE0EBE718A6E5E7007F0F1C /* _Plant.m */; };
+		BEE0EBEC18A6E5E7007F0F1C /* Plant.m in Sources */ = {isa = PBXBuildFile; fileRef = BEE0EBE918A6E5E7007F0F1C /* Plant.m */; };
+		BEE0EBED18A6E5E7007F0F1C /* Plant.m in Sources */ = {isa = PBXBuildFile; fileRef = BEE0EBE918A6E5E7007F0F1C /* Plant.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +97,13 @@
 		BEE0EBD018A6D9E9007F0F1C /* RSCoreDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSCoreDataController.m; sourceTree = "<group>"; };
 		BEE0EBD318A6DA28007F0F1C /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		BEE0EBD418A6DA28007F0F1C /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
+		BEE0EBD718A6DC27007F0F1C /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		BEE0EBDA18A6E0A2007F0F1C /* RSCoreDataController+PlantApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RSCoreDataController+PlantApp.h"; sourceTree = "<group>"; };
+		BEE0EBDB18A6E0A2007F0F1C /* RSCoreDataController+PlantApp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RSCoreDataController+PlantApp.m"; sourceTree = "<group>"; };
+		BEE0EBE618A6E5E7007F0F1C /* _Plant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _Plant.h; sourceTree = "<group>"; };
+		BEE0EBE718A6E5E7007F0F1C /* _Plant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _Plant.m; sourceTree = "<group>"; };
+		BEE0EBE818A6E5E7007F0F1C /* Plant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Plant.h; sourceTree = "<group>"; };
+		BEE0EBE918A6E5E7007F0F1C /* Plant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Plant.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +114,7 @@
 				BEDF2B14189DB67500B20C80 /* CoreGraphics.framework in Frameworks */,
 				BEDF2B16189DB67500B20C80 /* UIKit.framework in Frameworks */,
 				BEDF2B12189DB67500B20C80 /* Foundation.framework in Frameworks */,
+				BEE0EBD918A6DC35007F0F1C /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,6 +135,7 @@
 				BEDF2B4F189DB68E00B20C80 /* CoreGraphics.framework in Frameworks */,
 				BEDF2B50189DB68E00B20C80 /* UIKit.framework in Frameworks */,
 				BEDF2B51189DB68E00B20C80 /* Foundation.framework in Frameworks */,
+				BEE0EBD818A6DC27007F0F1C /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -149,6 +166,7 @@
 		BEDF2B10189DB67500B20C80 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BEE0EBD718A6DC27007F0F1C /* CoreData.framework */,
 				BEDF2B11189DB67500B20C80 /* Foundation.framework */,
 				BEDF2B13189DB67500B20C80 /* CoreGraphics.framework */,
 				BEDF2B15189DB67500B20C80 /* UIKit.framework */,
@@ -221,7 +239,7 @@
 				BEDF2B62189DBF0500B20C80 /* PlantDetailsViewController.h */,
 				BEDF2B63189DBF0500B20C80 /* PlantDetailsViewController.m */,
 			);
-			name = "View Controllers";
+			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 		BEE0EBBE18A6CE94007F0F1C /* Views */ = {
@@ -230,7 +248,7 @@
 				BEE0EBBF18A6CEAD007F0F1C /* PlantCollectionViewCell.h */,
 				BEE0EBC018A6CEAD007F0F1C /* PlantCollectionViewCell.m */,
 			);
-			name = Views;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		BEE0EBC618A6D24B007F0F1C /* Images */ = {
@@ -261,10 +279,24 @@
 		BEE0EBCE18A6D9DE007F0F1C /* Core Data */ = {
 			isa = PBXGroup;
 			children = (
+				BEE0EBE518A6E5B2007F0F1C /* Model */,
 				BEE0EBCF18A6D9E9007F0F1C /* RSCoreDataController.h */,
 				BEE0EBD018A6D9E9007F0F1C /* RSCoreDataController.m */,
+				BEE0EBDA18A6E0A2007F0F1C /* RSCoreDataController+PlantApp.h */,
+				BEE0EBDB18A6E0A2007F0F1C /* RSCoreDataController+PlantApp.m */,
 			);
-			name = "Core Data";
+			path = "Core Data";
+			sourceTree = "<group>";
+		};
+		BEE0EBE518A6E5B2007F0F1C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BEE0EBE618A6E5E7007F0F1C /* _Plant.h */,
+				BEE0EBE718A6E5E7007F0F1C /* _Plant.m */,
+				BEE0EBE818A6E5E7007F0F1C /* Plant.h */,
+				BEE0EBE918A6E5E7007F0F1C /* Plant.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -277,6 +309,7 @@
 				BEDF2B0A189DB67500B20C80 /* Sources */,
 				BEDF2B0B189DB67500B20C80 /* Frameworks */,
 				BEDF2B0C189DB67500B20C80 /* Resources */,
+				BEE0EBE318A6E472007F0F1C /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -309,6 +342,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BEDF2B57189DB68E00B20C80 /* Build configuration list for PBXNativeTarget "PlantAppTest" */;
 			buildPhases = (
+				BEE0EBE418A6E539007F0F1C /* ShellScript */,
 				BEDF2B4A189DB68E00B20C80 /* Sources */,
 				BEDF2B4E189DB68E00B20C80 /* Frameworks */,
 				BEDF2B52189DB68E00B20C80 /* Resources */,
@@ -394,14 +428,46 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		BEE0EBE318A6E472007F0F1C /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "mogenerator -m Resources/PlantAppModel.xcdatamodeld/PlantAppModel.xcdatamodel -O \"PlantApp/Core Data/Model\" --template-var arc=true";
+		};
+		BEE0EBE418A6E539007F0F1C /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "mogenerator -m Resources/PlantAppModel.xcdatamodeld/PlantAppModel.xcdatamodel -O \"PlantApp/Core Data/Model\" --template-var arc=true";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		BEDF2B0A189DB67500B20C80 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BEE0EBEC18A6E5E7007F0F1C /* Plant.m in Sources */,
 				BEDF2B60189DBEA700B20C80 /* PlantCollectionViewController.m in Sources */,
 				BEE0EBC118A6CEAD007F0F1C /* PlantCollectionViewCell.m in Sources */,
 				BEDF2B22189DB67500B20C80 /* AppDelegate.m in Sources */,
+				BEE0EBEA18A6E5E7007F0F1C /* _Plant.m in Sources */,
+				BEE0EBDC18A6E0A2007F0F1C /* RSCoreDataController+PlantApp.m in Sources */,
 				BEE0EBD518A6DA28007F0F1C /* Constants.m in Sources */,
 				BEE0EBD118A6D9E9007F0F1C /* RSCoreDataController.m in Sources */,
 				BEDF2B1E189DB67500B20C80 /* main.m in Sources */,
@@ -422,9 +488,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BEE0EBED18A6E5E7007F0F1C /* Plant.m in Sources */,
 				BEDF2B61189DBEA700B20C80 /* PlantCollectionViewController.m in Sources */,
 				BEE0EBC218A6CEAD007F0F1C /* PlantCollectionViewCell.m in Sources */,
 				BEDF2B4C189DB68E00B20C80 /* AppDelegate.m in Sources */,
+				BEE0EBEB18A6E5E7007F0F1C /* _Plant.m in Sources */,
+				BEE0EBDD18A6E0A2007F0F1C /* RSCoreDataController+PlantApp.m in Sources */,
 				BEE0EBD618A6DA28007F0F1C /* Constants.m in Sources */,
 				BEE0EBD218A6D9E9007F0F1C /* RSCoreDataController.m in Sources */,
 				BEDF2B4D189DB68E00B20C80 /* main.m in Sources */,

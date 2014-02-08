@@ -39,7 +39,7 @@
     if (managedObjectContext != nil) {
         if ([managedObjectContext hasChanges] && ![managedObjectContext save:&error])
         {
-#warning Incomplete error handling
+#warning CODE REVIEW - Use proper error handling
             NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
             abort();
         }
@@ -98,7 +98,7 @@
                                                          options:@{NSMigratePersistentStoresAutomaticallyOption:@YES, NSInferMappingModelAutomaticallyOption:@YES}
                                                            error:&error])
     {
-#warning Incomplete error handling
+#warning CODE REVIEW - Use proper error handling
         NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
         abort();
     }
