@@ -43,6 +43,10 @@
             NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
             abort();
         }
+        else
+        {
+            NSLog(@"Context save success");
+        }
     }
 }
 

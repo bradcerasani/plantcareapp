@@ -52,7 +52,7 @@
 
 #pragma mark - Core Data
 
-- (void)updatePlantEntity
+- (void)savePlant
 {
     if (_plant == nil)
     {
@@ -72,8 +72,7 @@
 
 - (IBAction)onDoneButtonTap:(id)sender
 {
-    // Save new plant into core data
-    [self updatePlantEntity];
+    [self savePlant];
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
