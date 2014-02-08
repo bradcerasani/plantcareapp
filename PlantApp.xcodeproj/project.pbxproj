@@ -40,6 +40,10 @@
 		BEE0EBC518A6D156007F0F1C /* missing_image@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BEE0EBC318A6D156007F0F1C /* missing_image@2x.png */; };
 		BEE0EBCC18A6D7D9007F0F1C /* PlantAppModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BEE0EBCA18A6D7D9007F0F1C /* PlantAppModel.xcdatamodeld */; };
 		BEE0EBCD18A6D7D9007F0F1C /* PlantAppModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BEE0EBCA18A6D7D9007F0F1C /* PlantAppModel.xcdatamodeld */; };
+		BEE0EBD118A6D9E9007F0F1C /* RSCoreDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEE0EBD018A6D9E9007F0F1C /* RSCoreDataController.m */; };
+		BEE0EBD218A6D9E9007F0F1C /* RSCoreDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEE0EBD018A6D9E9007F0F1C /* RSCoreDataController.m */; };
+		BEE0EBD518A6DA28007F0F1C /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = BEE0EBD418A6DA28007F0F1C /* Constants.m */; };
+		BEE0EBD618A6DA28007F0F1C /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = BEE0EBD418A6DA28007F0F1C /* Constants.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +85,10 @@
 		BEE0EBC018A6CEAD007F0F1C /* PlantCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlantCollectionViewCell.m; sourceTree = "<group>"; };
 		BEE0EBC318A6D156007F0F1C /* missing_image@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "missing_image@2x.png"; sourceTree = "<group>"; };
 		BEE0EBCB18A6D7D9007F0F1C /* PlantAppModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PlantAppModel.xcdatamodel; sourceTree = "<group>"; };
+		BEE0EBCF18A6D9E9007F0F1C /* RSCoreDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSCoreDataController.h; sourceTree = "<group>"; };
+		BEE0EBD018A6D9E9007F0F1C /* RSCoreDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSCoreDataController.m; sourceTree = "<group>"; };
+		BEE0EBD318A6DA28007F0F1C /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		BEE0EBD418A6DA28007F0F1C /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +160,7 @@
 		BEDF2B17189DB67500B20C80 /* PlantApp */ = {
 			isa = PBXGroup;
 			children = (
+				BEE0EBCE18A6D9DE007F0F1C /* Core Data */,
 				BEE0EBBE18A6CE94007F0F1C /* Views */,
 				BEDF2B5D189DBE4B00B20C80 /* View Controllers */,
 				BEDF2B20189DB67500B20C80 /* AppDelegate.h */,
@@ -170,6 +179,8 @@
 				BEDF2B1A189DB67500B20C80 /* InfoPlist.strings */,
 				BEDF2B1D189DB67500B20C80 /* main.m */,
 				BEDF2B1F189DB67500B20C80 /* PlantApp-Prefix.pch */,
+				BEE0EBD318A6DA28007F0F1C /* Constants.h */,
+				BEE0EBD418A6DA28007F0F1C /* Constants.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -245,6 +256,15 @@
 				BEE0EBCA18A6D7D9007F0F1C /* PlantAppModel.xcdatamodeld */,
 			);
 			name = "Core Data Model";
+			sourceTree = "<group>";
+		};
+		BEE0EBCE18A6D9DE007F0F1C /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				BEE0EBCF18A6D9E9007F0F1C /* RSCoreDataController.h */,
+				BEE0EBD018A6D9E9007F0F1C /* RSCoreDataController.m */,
+			);
+			name = "Core Data";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -382,6 +402,8 @@
 				BEDF2B60189DBEA700B20C80 /* PlantCollectionViewController.m in Sources */,
 				BEE0EBC118A6CEAD007F0F1C /* PlantCollectionViewCell.m in Sources */,
 				BEDF2B22189DB67500B20C80 /* AppDelegate.m in Sources */,
+				BEE0EBD518A6DA28007F0F1C /* Constants.m in Sources */,
+				BEE0EBD118A6D9E9007F0F1C /* RSCoreDataController.m in Sources */,
 				BEDF2B1E189DB67500B20C80 /* main.m in Sources */,
 				BEDF2B64189DBF0500B20C80 /* PlantDetailsViewController.m in Sources */,
 				BEE0EBCC18A6D7D9007F0F1C /* PlantAppModel.xcdatamodeld in Sources */,
@@ -403,6 +425,8 @@
 				BEDF2B61189DBEA700B20C80 /* PlantCollectionViewController.m in Sources */,
 				BEE0EBC218A6CEAD007F0F1C /* PlantCollectionViewCell.m in Sources */,
 				BEDF2B4C189DB68E00B20C80 /* AppDelegate.m in Sources */,
+				BEE0EBD618A6DA28007F0F1C /* Constants.m in Sources */,
+				BEE0EBD218A6D9E9007F0F1C /* RSCoreDataController.m in Sources */,
 				BEDF2B4D189DB68E00B20C80 /* main.m in Sources */,
 				BEDF2B65189DBF0500B20C80 /* PlantDetailsViewController.m in Sources */,
 				BEE0EBCD18A6D7D9007F0F1C /* PlantAppModel.xcdatamodeld in Sources */,
