@@ -371,6 +371,9 @@
 					BEDF2B31189DB67500B20C80 = {
 						TestTargetID = BEDF2B0D189DB67500B20C80;
 					};
+					BEDF2B49189DB68E00B20C80 = {
+						DevelopmentTeam = 6WCTGTPC8V;
+					};
 				};
 			};
 			buildConfigurationList = BEDF2B09189DB67500B20C80 /* Build configuration list for PBXProject "PlantApp" */;
