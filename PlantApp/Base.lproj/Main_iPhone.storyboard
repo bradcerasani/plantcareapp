@@ -116,7 +116,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Feeding Details" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cSm-5j-erb">
-                                <rect key="frame" x="101" y="257" width="119" height="21"/>
+                                <rect key="frame" x="101" y="273" width="119" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -153,21 +153,27 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kRO-Fa-nHK" userLabel="Plant Identity View">
-                                <rect key="frame" x="0.0" y="64" width="320" height="184"/>
+                                <rect key="frame" x="0.0" y="64" width="320" height="200"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0E9-kS-6ST" userLabel="Background Image">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="184"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jg5-tm-1pU" userLabel="Add Photo Button">
-                                        <rect key="frame" x="120" y="32" width="80" height="80"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iVR-pp-5QB">
+                                        <rect key="frame" x="100" y="16" width="120" height="120"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jg5-tm-1pU" userLabel="Add Photo Button">
+                                        <rect key="frame" x="100" y="16" width="120" height="120"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="80" id="RHl-Ig-ETK"/>
-                                            <constraint firstAttribute="width" constant="80" id="YNj-iH-tYi"/>
+                                            <constraint firstAttribute="height" constant="120" id="RHl-Ig-ETK"/>
+                                            <constraint firstAttribute="width" constant="120" id="YNj-iH-tYi"/>
                                         </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <state key="normal" title="Photo">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -176,13 +182,13 @@
                                         </connections>
                                     </button>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Plant Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Svf-zb-mxi" userLabel="Plant Name TextView">
-                                        <rect key="frame" x="60" y="122" width="200" height="30"/>
+                                        <rect key="frame" x="60" y="154" width="200" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="200" id="7IS-ka-Avc"/>
                                             <constraint firstAttribute="height" constant="30" id="J1Q-K3-Ktx"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                         <connections>
                                             <action selector="onPlantNameEdit:" destination="pxl-gS-O7S" eventType="editingDidEnd" id="ylI-rU-MRd"/>
@@ -192,15 +198,19 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="184" id="0rB-pw-3dW"/>
+                                    <constraint firstAttribute="height" constant="200" id="0rB-pw-3dW"/>
                                     <constraint firstItem="0E9-kS-6ST" firstAttribute="top" secondItem="kRO-Fa-nHK" secondAttribute="top" id="14r-PS-ORw"/>
                                     <constraint firstAttribute="trailing" secondItem="0E9-kS-6ST" secondAttribute="trailing" id="6bs-39-gNH"/>
+                                    <constraint firstItem="iVR-pp-5QB" firstAttribute="width" secondItem="Jg5-tm-1pU" secondAttribute="width" id="G53-JN-vON"/>
+                                    <constraint firstItem="iVR-pp-5QB" firstAttribute="height" secondItem="Jg5-tm-1pU" secondAttribute="height" id="i27-xc-gIv"/>
                                     <constraint firstAttribute="centerX" secondItem="Svf-zb-mxi" secondAttribute="centerX" id="mBX-4N-K6m"/>
                                     <constraint firstItem="0E9-kS-6ST" firstAttribute="leading" secondItem="kRO-Fa-nHK" secondAttribute="leading" id="n2Z-r3-ZSN"/>
-                                    <constraint firstAttribute="bottom" secondItem="Svf-zb-mxi" secondAttribute="bottom" constant="32" id="pUh-38-UpD"/>
+                                    <constraint firstAttribute="bottom" secondItem="Svf-zb-mxi" secondAttribute="bottom" constant="16" id="pUh-38-UpD"/>
                                     <constraint firstAttribute="centerX" secondItem="Jg5-tm-1pU" secondAttribute="centerX" id="qMh-hq-JC9"/>
+                                    <constraint firstItem="iVR-pp-5QB" firstAttribute="top" secondItem="Jg5-tm-1pU" secondAttribute="top" id="qac-Ky-UHg"/>
                                     <constraint firstAttribute="bottom" secondItem="0E9-kS-6ST" secondAttribute="bottom" id="sRT-Gr-HmM"/>
-                                    <constraint firstItem="Jg5-tm-1pU" firstAttribute="top" secondItem="kRO-Fa-nHK" secondAttribute="top" constant="32" id="xiU-pN-AS8"/>
+                                    <constraint firstItem="iVR-pp-5QB" firstAttribute="leading" secondItem="Jg5-tm-1pU" secondAttribute="leading" id="xAR-ST-9Vm"/>
+                                    <constraint firstItem="Jg5-tm-1pU" firstAttribute="top" secondItem="kRO-Fa-nHK" secondAttribute="top" constant="16" id="xiU-pN-AS8"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -212,6 +222,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="xvm-eo-m1D">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="vcQ-3k-WLG">
+                            <connections>
+                                <action selector="onCancelButtonTap:" destination="pxl-gS-O7S" id="RmV-Qq-9AW"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="FhQ-gp-xTe">
                             <connections>
                                 <action selector="onDoneButtonTap:" destination="pxl-gS-O7S" id="8GV-v9-hck"/>
@@ -222,11 +237,13 @@
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="backgroundImageView" destination="0E9-kS-6ST" id="Qjt-ij-2pe"/>
+                        <outlet property="cancelButton" destination="vcQ-3k-WLG" id="FF3-aQ-txc"/>
                         <outlet property="doneButton" destination="FhQ-gp-xTe" id="tPB-9Q-ElX"/>
                         <outlet property="fertilizerButton" destination="Qby-Kc-kXd" id="SLX-P6-WDV"/>
                         <outlet property="lightButton" destination="O4l-XL-Gz3" id="occ-FI-VlR"/>
                         <outlet property="mistButton" destination="ygN-gi-Kvh" id="zGa-3P-Bdo"/>
                         <outlet property="photoButton" destination="Jg5-tm-1pU" id="lbf-aj-CWZ"/>
+                        <outlet property="plantImageView" destination="iVR-pp-5QB" id="7JJ-CN-jgL"/>
                         <outlet property="plantNameTextField" destination="Svf-zb-mxi" id="81F-ZP-hyd"/>
                         <outlet property="waterButton" destination="pXt-dN-dC0" id="ThG-cw-kKX"/>
                     </connections>
@@ -238,7 +255,6 @@
         <!--Navigation Controller-->
         <scene sceneID="vCa-Ok-Oc2">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4Pd-a3-Zqq" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController definesPresentationContext="YES" id="MDk-4s-hgp" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="tRn-FQ-Npe">
                         <autoresizingMask key="autoresizingMask"/>
@@ -247,6 +263,7 @@
                         <segue destination="pxl-gS-O7S" kind="relationship" relationship="rootViewController" id="geG-VK-X34"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Pd-a3-Zqq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="619" y="518"/>
         </scene>
