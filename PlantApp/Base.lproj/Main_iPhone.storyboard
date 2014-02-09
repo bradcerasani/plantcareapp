@@ -84,7 +84,7 @@
                     <navigationItem key="navigationItem" id="XFz-AQ-KWX">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="iIw-qK-G6I">
                             <connections>
-                                <segue destination="MDk-4s-hgp" kind="modal" id="Nq4-CA-fRV"/>
+                                <segue destination="MDk-4s-hgp" kind="modal" identifier="PlantDetailSegue" id="Nq4-CA-fRV"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -238,6 +238,7 @@
         <!--Navigation Controller-->
         <scene sceneID="vCa-Ok-Oc2">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Pd-a3-Zqq" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController definesPresentationContext="YES" id="MDk-4s-hgp" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="tRn-FQ-Npe">
                         <autoresizingMask key="autoresizingMask"/>
@@ -246,7 +247,6 @@
                         <segue destination="pxl-gS-O7S" kind="relationship" relationship="rootViewController" id="geG-VK-X34"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4Pd-a3-Zqq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="619" y="518"/>
         </scene>
