@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "BEDF2B49189DB68E00B20C80"
-               BuildableName = "PlantApp Test.app"
+               BuildableName = "PlantApp.app"
                BlueprintName = "PlantAppTest"
                ReferencedContainer = "container:PlantApp.xcodeproj">
             </BuildableReference>
@@ -33,7 +33,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "BEDF2B49189DB68E00B20C80"
-            BuildableName = "PlantApp Test.app"
+            BuildableName = "PlantApp.app"
             BlueprintName = "PlantAppTest"
             ReferencedContainer = "container:PlantApp.xcodeproj">
          </BuildableReference>
@@ -52,7 +52,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "BEDF2B49189DB68E00B20C80"
-            BuildableName = "PlantApp Test.app"
+            BuildableName = "PlantApp.app"
             BlueprintName = "PlantAppTest"
             ReferencedContainer = "container:PlantApp.xcodeproj">
          </BuildableReference>
@@ -70,7 +70,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "BEDF2B49189DB68E00B20C80"
-            BuildableName = "PlantApp Test.app"
+            BuildableName = "PlantApp.app"
             BlueprintName = "PlantAppTest"
             ReferencedContainer = "container:PlantApp.xcodeproj">
          </BuildableReference>
