@@ -181,7 +181,9 @@ NSMutableArray *_objectChanges;
 {
     Plant *plant = [_fetchedResultsController objectAtIndexPath:indexPath];
     cell.plantNameLabel.text = plant.plantName;
-//    cell.plantImageView.image = [UIImage imageNamed:@""];
+    cell.plantImageView.image = [plant imageForPlant];
+    cell.plantImageView.layer.cornerRadius = cell.plantImageView.frame.size.width / 2;
+    cell.plantImageView.layer.masksToBounds = YES;
     return cell;
 }
 
@@ -189,7 +191,7 @@ NSMutableArray *_objectChanges;
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    if ([[segue identifier] isEqualToString:@"PlantSegue"])
+    if ([[segue identifier] isEqualToString:@"PlantDetailSegue"])
     {
         Plant *plant = nil;
         if ([sender isKindOfClass:[UICollectionViewCell class]])
