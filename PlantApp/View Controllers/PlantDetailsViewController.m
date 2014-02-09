@@ -7,6 +7,7 @@
 //
 
 #import "PlantDetailsViewController.h"
+#import "Plant.h"
 
 @interface PlantDetailsViewController () <UITextFieldDelegate>
 
@@ -31,25 +32,18 @@
 
 @implementation PlantDetailsViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+    // Load image from sandbox for photo
+    _photoButton.imageView.image = [UIImage imageNamed:@""];
+    
+    _plantNameTextField.text = _plant.plantName;
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 #pragma mark - UITextFieldDelegate
@@ -60,10 +54,29 @@
     return YES;
 }
 
+#pragma mark - Core Data
+
+- (void)savePlant
+{
+    if (_plant == nil)
+    {
+        self.plant = [[RSCoreDataController sharedController] newPlantEntity];
+        _plant.plantDateAdded = [NSDate date];
+    }
+    _plant.plantId = @(0);
+    _plant.plantName = _plantNameTextField.text;
+    _plant.plantImageFilename = @"";
+    _plant.plantWaterPeriod = @(0);
+    _plant.plantMistPeriod = @(0);
+    _plant.plantFertilizerPeriod = @(0);
+    [[RSCoreDataController sharedController] saveContext];
+}
+
 #pragma mark - IBActions
 
 - (IBAction)onDoneButtonTap:(id)sender
 {
+    [self savePlant];
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
