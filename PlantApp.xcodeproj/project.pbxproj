@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BEA07B1E18A82CC4005B3633 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEA07B1D18A82CC4005B3633 /* MobileCoreServices.framework */; };
+		BEA07B1F18A82CCC005B3633 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEA07B1D18A82CC4005B3633 /* MobileCoreServices.framework */; };
 		BEDF2B12189DB67500B20C80 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEDF2B11189DB67500B20C80 /* Foundation.framework */; };
 		BEDF2B14189DB67500B20C80 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEDF2B13189DB67500B20C80 /* CoreGraphics.framework */; };
 		BEDF2B16189DB67500B20C80 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEDF2B15189DB67500B20C80 /* UIKit.framework */; };
@@ -65,6 +67,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BEA07B1D18A82CC4005B3633 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		BEDF2B0E189DB67500B20C80 /* PlantApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlantApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEDF2B11189DB67500B20C80 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		BEDF2B13189DB67500B20C80 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -83,7 +86,7 @@
 		BEDF2B3B189DB67500B20C80 /* PlantAppTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PlantAppTests-Info.plist"; sourceTree = "<group>"; };
 		BEDF2B3D189DB67500B20C80 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		BEDF2B3F189DB67500B20C80 /* PlantAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlantAppTests.m; sourceTree = "<group>"; };
-		BEDF2B5A189DB68E00B20C80 /* PlantApp Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PlantApp Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BEDF2B5A189DB68E00B20C80 /* PlantApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlantApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEDF2B5B189DB68E00B20C80 /* PlantAppTest-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "PlantAppTest-Info.plist"; path = "/Users/rudistrahl/Source/iOS/PlantApp/PlantAppTest-Info.plist"; sourceTree = "<absolute>"; };
 		BEDF2B5E189DBEA700B20C80 /* PlantCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlantCollectionViewController.h; sourceTree = "<group>"; };
 		BEDF2B5F189DBEA700B20C80 /* PlantCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlantCollectionViewController.m; sourceTree = "<group>"; };
@@ -114,6 +117,7 @@
 				BEDF2B14189DB67500B20C80 /* CoreGraphics.framework in Frameworks */,
 				BEDF2B16189DB67500B20C80 /* UIKit.framework in Frameworks */,
 				BEDF2B12189DB67500B20C80 /* Foundation.framework in Frameworks */,
+				BEA07B1F18A82CCC005B3633 /* MobileCoreServices.framework in Frameworks */,
 				BEE0EBD918A6DC35007F0F1C /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -135,6 +139,7 @@
 				BEDF2B4F189DB68E00B20C80 /* CoreGraphics.framework in Frameworks */,
 				BEDF2B50189DB68E00B20C80 /* UIKit.framework in Frameworks */,
 				BEDF2B51189DB68E00B20C80 /* Foundation.framework in Frameworks */,
+				BEA07B1E18A82CC4005B3633 /* MobileCoreServices.framework in Frameworks */,
 				BEE0EBD818A6DC27007F0F1C /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -158,7 +163,7 @@
 			children = (
 				BEDF2B0E189DB67500B20C80 /* PlantApp.app */,
 				BEDF2B32189DB67500B20C80 /* PlantAppTests.xctest */,
-				BEDF2B5A189DB68E00B20C80 /* PlantApp Test.app */,
+				BEDF2B5A189DB68E00B20C80 /* PlantApp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -166,6 +171,7 @@
 		BEDF2B10189DB67500B20C80 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BEA07B1D18A82CC4005B3633 /* MobileCoreServices.framework */,
 				BEE0EBD718A6DC27007F0F1C /* CoreData.framework */,
 				BEDF2B11189DB67500B20C80 /* Foundation.framework */,
 				BEDF2B13189DB67500B20C80 /* CoreGraphics.framework */,
@@ -353,7 +359,7 @@
 			);
 			name = PlantAppTest;
 			productName = PlantApp;
-			productReference = BEDF2B5A189DB68E00B20C80 /* PlantApp Test.app */;
+			productReference = BEDF2B5A189DB68E00B20C80 /* PlantApp.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -636,6 +642,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PlantApp/PlantApp-Prefix.pch";
 				INFOPLIST_FILE = "PlantApp/PlantApp-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -650,6 +657,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PlantApp/PlantApp-Prefix.pch";
 				INFOPLIST_FILE = "PlantApp/PlantApp-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -706,7 +714,8 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PlantApp/PlantApp-Prefix.pch";
 				INFOPLIST_FILE = "PlantAppTest-Info.plist";
-				PRODUCT_NAME = "PlantApp Test";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				PRODUCT_NAME = PlantApp;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -720,7 +729,8 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PlantApp/PlantApp-Prefix.pch";
 				INFOPLIST_FILE = "PlantAppTest-Info.plist";
-				PRODUCT_NAME = "PlantApp Test";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				PRODUCT_NAME = PlantApp;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
