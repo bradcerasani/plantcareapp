@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+@class Plant;
+
 @interface PlantDetailsViewController : UIViewController
+
+@property (strong, nonatomic) Plant *plant;
 
 @end
