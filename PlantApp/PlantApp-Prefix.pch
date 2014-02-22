@@ -16,4 +16,5 @@
     #import <CoreData/CoreData.h>
     #import "RSCoreDataController+PlantApp.h"
     #import "Constants.h"
+    #import "DLogMacro.h"
 #endif

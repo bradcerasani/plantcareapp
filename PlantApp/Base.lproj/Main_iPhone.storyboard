@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="KmJ-5H-Q9T">
     <dependencies>
+        <deployment defaultVersion="1552" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
     <scenes>
@@ -19,12 +20,12 @@
             </objects>
             <point key="canvasLocation" x="-448" y="25"/>
         </scene>
-        <!--Plant Collection View Controller-->
+        <!--Plant Collection View Controller - <MISSING>-->
         <scene sceneID="Rcm-iR-O81">
             <objects>
                 <collectionViewController storyboardIdentifier="PlantCollection" autoresizesArchivedViewToFullSize="NO" id="Ji7-dr-V9B" customClass="PlantCollectionViewController" sceneMemberID="viewController">
                     <collectionView key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" id="0Vy-ov-EvS">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="zSh-G9-gET">
@@ -81,7 +82,7 @@
                             <outlet property="delegate" destination="Ji7-dr-V9B" id="MoZ-20-CzD"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" id="XFz-AQ-KWX">
+                    <navigationItem key="navigationItem" title="&lt;MISSING>" id="XFz-AQ-KWX">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="iIw-qK-G6I">
                             <connections>
                                 <segue destination="MDk-4s-hgp" kind="modal" identifier="PlantDetailSegue" id="Nq4-CA-fRV"/>
@@ -102,56 +103,9 @@
                         <viewControllerLayoutGuide type="bottom" id="fu4-7O-l4C"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="UuB-c8-vud">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O4l-XL-Gz3" userLabel="Light Button">
-                                <rect key="frame" x="56" y="286" width="100" height="100"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Light">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="onLightButtonTap:" destination="pxl-gS-O7S" eventType="touchUpInside" id="Si4-sV-bnp"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Feeding Details" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cSm-5j-erb">
-                                <rect key="frame" x="101" y="273" width="119" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pXt-dN-dC0" userLabel="Water Button">
-                                <rect key="frame" x="164" y="286" width="100" height="100"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Water">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="onWaterButtonTap:" destination="pxl-gS-O7S" eventType="touchUpInside" id="EqH-cx-X5t"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ygN-gi-Kvh" userLabel="Mist Button">
-                                <rect key="frame" x="56" y="394" width="100" height="100"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Mist">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="onMistButtonTap:" destination="pxl-gS-O7S" eventType="touchUpInside" id="hSj-5D-6AH"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qby-Kc-kXd" userLabel="Fertilizer Button">
-                                <rect key="frame" x="164" y="394" width="100" height="100"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Fertilizer">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="onFertilizerButtonTap:" destination="pxl-gS-O7S" eventType="touchUpInside" id="20u-cf-1Tc"/>
-                                </connections>
-                            </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kRO-Fa-nHK" userLabel="Plant Identity View">
                                 <rect key="frame" x="0.0" y="64" width="320" height="200"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -213,10 +167,95 @@
                                     <constraint firstItem="Jg5-tm-1pU" firstAttribute="top" secondItem="kRO-Fa-nHK" secondAttribute="top" constant="16" id="xiU-pN-AS8"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o4y-Gu-5lh" userLabel="Feeding Details View">
+                                <rect key="frame" x="0.0" y="264" width="320" height="216"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O4l-XL-Gz3" userLabel="Light Button">
+                                        <rect key="frame" x="248" y="72" width="72" height="72"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="72" id="Jga-i0-6SW"/>
+                                            <constraint firstAttribute="height" constant="72" id="uX5-kc-jQe"/>
+                                        </constraints>
+                                        <state key="normal" title="Light">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onLightButtonTap:" destination="pxl-gS-O7S" eventType="touchUpInside" id="Si4-sV-bnp"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pXt-dN-dC0" userLabel="Water Button">
+                                        <rect key="frame" x="0.0" y="72" width="72" height="72"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="72" id="lJf-G6-tfr"/>
+                                            <constraint firstAttribute="height" constant="72" id="lyU-9F-OD6"/>
+                                        </constraints>
+                                        <state key="normal" title="Water">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onWaterButtonTap:" destination="pxl-gS-O7S" eventType="touchUpInside" id="EqH-cx-X5t"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ygN-gi-Kvh" userLabel="Mist Button">
+                                        <rect key="frame" x="80" y="72" width="72" height="72"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="72" id="4EN-Xc-ZZJ"/>
+                                            <constraint firstAttribute="width" constant="72" id="ycN-Zt-xqq"/>
+                                        </constraints>
+                                        <state key="normal" title="Mist">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onMistButtonTap:" destination="pxl-gS-O7S" eventType="touchUpInside" id="hSj-5D-6AH"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qby-Kc-kXd" userLabel="Fertilizer Button">
+                                        <rect key="frame" x="168" y="72" width="72" height="72"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="72" id="ImK-Q3-NJq"/>
+                                            <constraint firstAttribute="width" constant="72" id="Jgk-6j-2nP"/>
+                                        </constraints>
+                                        <state key="normal" title="Fertilize">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onFertilizerButtonTap:" destination="pxl-gS-O7S" eventType="touchUpInside" id="20u-cf-1Tc"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Feeding Details" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o59-YD-OAy">
+                                        <rect key="frame" x="20" y="20" width="280" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="O4l-XL-Gz3" secondAttribute="trailing" id="8bQ-D9-9xG"/>
+                                    <constraint firstAttribute="centerY" secondItem="Qby-Kc-kXd" secondAttribute="centerY" id="ZcB-f1-dT6"/>
+                                    <constraint firstAttribute="centerY" secondItem="ygN-gi-Kvh" secondAttribute="centerY" id="dSz-DP-9i3"/>
+                                    <constraint firstAttribute="centerY" secondItem="O4l-XL-Gz3" secondAttribute="centerY" id="fOx-6u-etC"/>
+                                    <constraint firstItem="ygN-gi-Kvh" firstAttribute="leading" secondItem="pXt-dN-dC0" secondAttribute="trailing" constant="8" id="g4m-9l-Y0n"/>
+                                    <constraint firstAttribute="centerY" secondItem="pXt-dN-dC0" secondAttribute="centerY" id="gRv-ZC-OFb"/>
+                                    <constraint firstItem="Qby-Kc-kXd" firstAttribute="leading" secondItem="ygN-gi-Kvh" secondAttribute="trailing" constant="16" id="phe-PK-EgE"/>
+                                    <constraint firstItem="O4l-XL-Gz3" firstAttribute="leading" secondItem="Qby-Kc-kXd" secondAttribute="trailing" constant="8" id="uBE-Ev-ujw"/>
+                                    <constraint firstItem="pXt-dN-dC0" firstAttribute="leading" secondItem="o4y-Gu-5lh" secondAttribute="leading" id="uO3-1g-CCz"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="o4y-Gu-5lh" firstAttribute="leading" secondItem="UuB-c8-vud" secondAttribute="leading" id="CF3-vg-gvi"/>
                             <constraint firstAttribute="trailing" secondItem="kRO-Fa-nHK" secondAttribute="trailing" id="JWl-Ao-jVg"/>
+                            <constraint firstItem="o4y-Gu-5lh" firstAttribute="top" secondItem="kRO-Fa-nHK" secondAttribute="bottom" id="a2s-ES-Ikv"/>
+                            <constraint firstAttribute="bottom" secondItem="o4y-Gu-5lh" secondAttribute="bottom" id="bMh-Hm-bch"/>
+                            <constraint firstAttribute="trailing" secondItem="o4y-Gu-5lh" secondAttribute="trailing" id="boE-jZ-EeR"/>
                             <constraint firstItem="kRO-Fa-nHK" firstAttribute="top" secondItem="wUP-SI-9HH" secondAttribute="bottom" id="h1e-xx-cAP"/>
                             <constraint firstItem="kRO-Fa-nHK" firstAttribute="leading" secondItem="UuB-c8-vud" secondAttribute="leading" id="l9p-Jx-Npm"/>
                         </constraints>
@@ -239,10 +278,12 @@
                         <outlet property="backgroundImageView" destination="0E9-kS-6ST" id="Qjt-ij-2pe"/>
                         <outlet property="cancelButton" destination="vcQ-3k-WLG" id="FF3-aQ-txc"/>
                         <outlet property="doneButton" destination="FhQ-gp-xTe" id="tPB-9Q-ElX"/>
+                        <outlet property="feedingDetailsView" destination="o4y-Gu-5lh" id="FJg-VQ-CJJ"/>
                         <outlet property="fertilizerButton" destination="Qby-Kc-kXd" id="SLX-P6-WDV"/>
                         <outlet property="lightButton" destination="O4l-XL-Gz3" id="occ-FI-VlR"/>
                         <outlet property="mistButton" destination="ygN-gi-Kvh" id="zGa-3P-Bdo"/>
                         <outlet property="photoButton" destination="Jg5-tm-1pU" id="lbf-aj-CWZ"/>
+                        <outlet property="plantIdentityView" destination="kRO-Fa-nHK" id="pLN-jn-bCH"/>
                         <outlet property="plantImageView" destination="iVR-pp-5QB" id="7JJ-CN-jgL"/>
                         <outlet property="plantNameTextField" destination="Svf-zb-mxi" id="81F-ZP-hyd"/>
                         <outlet property="waterButton" destination="pXt-dN-dC0" id="ThG-cw-kKX"/>
@@ -274,6 +315,6 @@
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4"/>
+        <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
 </document>

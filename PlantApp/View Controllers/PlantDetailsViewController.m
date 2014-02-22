@@ -7,6 +7,7 @@
 //
 
 #import "PlantDetailsViewController.h"
+#import "EditPlantFeedingDetailsView.h"
 #import "Plant.h"
 #import <MobileCoreServices/MobileCoreServices.h>
 
@@ -14,6 +15,8 @@
 
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *cancelButton;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *doneButton;
+@property (weak, nonatomic) IBOutlet UIView *plantIdentityView;
+@property (weak, nonatomic) IBOutlet UIView *feedingDetailsView;
 @property (weak, nonatomic) IBOutlet UIImageView *backgroundImageView;
 @property (weak, nonatomic) IBOutlet UIButton *photoButton;
 @property (weak, nonatomic) IBOutlet UIImageView *plantImageView;
@@ -22,6 +25,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *waterButton;
 @property (weak, nonatomic) IBOutlet UIButton *mistButton;
 @property (weak, nonatomic) IBOutlet UIButton *fertilizerButton;
+@property (strong, nonatomic) EditPlantFeedingDetailsView *editFeedingDetailsView;
+@property (strong, nonatomic) UITapGestureRecognizer *tapGestureRecognizer;
 
 - (IBAction)onDoneButtonTap:(id)sender;
 - (IBAction)onPhotoButtonTap:(id)sender;
@@ -30,6 +35,8 @@
 - (IBAction)onWaterButtonTap:(id)sender;
 - (IBAction)onMistButtonTap:(id)sender;
 - (IBAction)onFertilizerButtonTap:(id)sender;
+
+- (void)displayEditDetailsPopoverForButton:(id)sender;
 
 @end
 
@@ -45,6 +52,11 @@
     // Apply style to imageview and button
     _plantImageView.layer.cornerRadius = _photoButton.layer.cornerRadius = _plantImageView.frame.size.width / 2;
     _plantImageView.layer.masksToBounds = _photoButton.layer.masksToBounds = YES;
+    
+    // Add tap gesture recognizer for dismissing popover
+    self.tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissEditDetailsPopover)];
+    self.tapGestureRecognizer.enabled = NO;
+    [self.view addGestureRecognizer:self.tapGestureRecognizer];
 }
 
 - (void)didReceiveMemoryWarning
@@ -163,18 +175,80 @@
 
 - (IBAction)onLightButtonTap:(id)sender
 {
+    // Present a control that lets you select between light options
+    // Shade, Medium, Full?
 }
 
 - (IBAction)onWaterButtonTap:(id)sender
 {
+    // Present a control that lets you select the period in days
+    [self displayEditDetailsPopoverForButton:sender];
 }
 
 - (IBAction)onMistButtonTap:(id)sender
 {
+    // Present a control that lets you select the period in days
+    [self displayEditDetailsPopoverForButton:sender];
 }
 
 - (IBAction)onFertilizerButtonTap:(id)sender
 {
+    // Present a control that lets you select the period in days
+    [self displayEditDetailsPopoverForButton:sender];
+}
+
+#pragma mark - 
+
+- (void)displayEditDetailsPopoverForButton:(id)sender
+{
+    DLog(@"");
+    UIButton *button = (UIButton *)sender;
+    if (!self.editFeedingDetailsView)
+    {
+        self.editFeedingDetailsView = [[[NSBundle mainBundle] loadNibNamed:@"EditPlantFeedingDetailsView" owner:self options:nil] objectAtIndex:0];
+        self.editFeedingDetailsView.alpha = 0.0f;
+        self.editFeedingDetailsView.hidden = YES;
+    }
+    
+    // Position the view over the button that summoned it
+    CGPoint buttonOrigin = [self.feedingDetailsView convertPoint:button.frame.origin toView:self.view];
+    DLog(@"%f", buttonOrigin.y);
+    CGFloat newX = (self.view.frame.size.width - self.editFeedingDetailsView.frame.size.width) / 2;
+    CGFloat newY = abs(buttonOrigin.y - self.editFeedingDetailsView.frame.size.height);
+    CGRect frame = self.editFeedingDetailsView.frame;
+    frame.origin.x = newX;
+    frame.origin.y = newY;
+    self.editFeedingDetailsView.frame = frame;
+    
+    // Set the data for the view
+#warning Incomplete implementation
+
+    // Animate into view
+    if (self.editFeedingDetailsView.hidden)
+    {
+        [self.view addSubview:self.editFeedingDetailsView];
+        self.editFeedingDetailsView.hidden = NO;
+        [UIView animateWithDuration:0.3f delay:0.0f options:UIViewAnimationOptionCurveEaseOut animations:^{
+            self.editFeedingDetailsView.alpha = 1.0f;
+        } completion:^(BOOL completion) {
+            // Enable the tap recognizer in the superview so we can dismiss the popover
+            self.tapGestureRecognizer.enabled = YES;
+        }];
+    }
+}
+
+- (void)dismissEditDetailsPopover
+{
+    DLog(@"");
+    // Animate
+    [UIView animateWithDuration:0.3f delay:0.0f options:UIViewAnimationOptionCurveEaseIn animations:^{
+        self.editFeedingDetailsView.alpha = 0.0f;
+    } completion:^(BOOL completed) {
+        // Remove the popover from the view stack and disable the tap recognizer
+        self.editFeedingDetailsView.hidden = YES;
+        [self.editFeedingDetailsView removeFromSuperview];
+        self.tapGestureRecognizer.enabled = NO;
+    }];
 }
 
 @end
