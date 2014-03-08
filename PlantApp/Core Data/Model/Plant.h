@@ -1,5 +1,18 @@
 #import "_Plant.h"
 
+typedef enum {
+    PlantFeedLightShade,
+    PlantFeedLightMedium,
+    PlantFeedLightFull
+} PlantFeedLight;
+
+typedef enum {
+    PlantFeedTypeLight = 1,
+    PlantFeedTypeFertilizer = 2,
+    PlantFeedTypeWater = 3,
+    PlantFeedTypeMist = 4
+} PlantFeedType;
+
 @interface Plant : _Plant {}
 
 /**
