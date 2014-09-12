@@ -10,18 +10,20 @@
 
 @implementation PlantCollectionViewCell
 
-- (id)initWithFrame:(CGRect)frame
+- (void)layoutSubviews
 {
-    self = [super initWithFrame:frame];
-    if (self) {
-        // Initialization code
-    }
-    return self;
+    [super layoutSubviews];
+    self.imageView.layer.cornerRadius = self.imageView.frame.size.height / 2;
 }
 
-- (void)awakeFromNib
+- (void)setName:(NSString *)name
 {
-    
+    self.nameLabel.text = name;
+}
+
+- (void)setImage:(UIImage *)image
+{
+    self.imageView.image = image;
 }
 
 @end

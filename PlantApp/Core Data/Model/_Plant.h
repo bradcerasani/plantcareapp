@@ -1,33 +1,16 @@
 // DO NOT EDIT. This file is machine-generated and constantly overwritten.
 // Make changes to Plant.h instead.
 
-#import <CoreData/CoreData.h>
-
+@import CoreData;
 
 extern const struct PlantAttributes {
-	__unsafe_unretained NSString *plantDateAdded;
-	__unsafe_unretained NSString *plantFertilizerPeriod;
-	__unsafe_unretained NSString *plantId;
-	__unsafe_unretained NSString *plantImageFilename;
-	__unsafe_unretained NSString *plantMistPeriod;
-	__unsafe_unretained NSString *plantName;
-	__unsafe_unretained NSString *plantWaterPeriod;
+	__unsafe_unretained NSString *dateCreated;
+	__unsafe_unretained NSString *dateWaterRefreshed;
+	__unsafe_unretained NSString *image;
+	__unsafe_unretained NSString *name;
+	__unsafe_unretained NSString *uid;
+	__unsafe_unretained NSString *waterPeriod;
 } PlantAttributes;
-
-extern const struct PlantRelationships {
-} PlantRelationships;
-
-extern const struct PlantFetchedProperties {
-} PlantFetchedProperties;
-
-
-
-
-
-
-
-
-
 
 @interface PlantID : NSManagedObjectID {}
 @end
@@ -36,160 +19,59 @@ extern const struct PlantFetchedProperties {
 + (id)insertInManagedObjectContext:(NSManagedObjectContext*)moc_;
 + (NSString*)entityName;
 + (NSEntityDescription*)entityInManagedObjectContext:(NSManagedObjectContext*)moc_;
-- (PlantID*)objectID;
+@property (nonatomic, readonly, strong) PlantID* objectID;
 
+@property (nonatomic, strong) NSDate* dateCreated;
 
+//- (BOOL)validateDateCreated:(id*)value_ error:(NSError**)error_;
 
+@property (nonatomic, strong) NSDate* dateWaterRefreshed;
 
+//- (BOOL)validateDateWaterRefreshed:(id*)value_ error:(NSError**)error_;
 
-@property (nonatomic, strong) NSDate* plantDateAdded;
+@property (nonatomic, strong) NSData* image;
 
+//- (BOOL)validateImage:(id*)value_ error:(NSError**)error_;
 
+@property (nonatomic, strong) NSString* name;
 
-//- (BOOL)validatePlantDateAdded:(id*)value_ error:(NSError**)error_;
+//- (BOOL)validateName:(id*)value_ error:(NSError**)error_;
 
+@property (nonatomic, strong) NSString* uid;
 
+//- (BOOL)validateUid:(id*)value_ error:(NSError**)error_;
 
+@property (nonatomic, strong) NSNumber* waterPeriod;
 
+@property (atomic) int16_t waterPeriodValue;
+- (int16_t)waterPeriodValue;
+- (void)setWaterPeriodValue:(int16_t)value_;
 
-@property (nonatomic, strong) NSNumber* plantFertilizerPeriod;
-
-
-
-@property int16_t plantFertilizerPeriodValue;
-- (int16_t)plantFertilizerPeriodValue;
-- (void)setPlantFertilizerPeriodValue:(int16_t)value_;
-
-//- (BOOL)validatePlantFertilizerPeriod:(id*)value_ error:(NSError**)error_;
-
-
-
-
-
-@property (nonatomic, strong) NSNumber* plantId;
-
-
-
-@property int16_t plantIdValue;
-- (int16_t)plantIdValue;
-- (void)setPlantIdValue:(int16_t)value_;
-
-//- (BOOL)validatePlantId:(id*)value_ error:(NSError**)error_;
-
-
-
-
-
-@property (nonatomic, strong) NSString* plantImageFilename;
-
-
-
-//- (BOOL)validatePlantImageFilename:(id*)value_ error:(NSError**)error_;
-
-
-
-
-
-@property (nonatomic, strong) NSNumber* plantMistPeriod;
-
-
-
-@property int16_t plantMistPeriodValue;
-- (int16_t)plantMistPeriodValue;
-- (void)setPlantMistPeriodValue:(int16_t)value_;
-
-//- (BOOL)validatePlantMistPeriod:(id*)value_ error:(NSError**)error_;
-
-
-
-
-
-@property (nonatomic, strong) NSString* plantName;
-
-
-
-//- (BOOL)validatePlantName:(id*)value_ error:(NSError**)error_;
-
-
-
-
-
-@property (nonatomic, strong) NSNumber* plantWaterPeriod;
-
-
-
-@property int16_t plantWaterPeriodValue;
-- (int16_t)plantWaterPeriodValue;
-- (void)setPlantWaterPeriodValue:(int16_t)value_;
-
-//- (BOOL)validatePlantWaterPeriod:(id*)value_ error:(NSError**)error_;
-
-
-
-
-
-
-@end
-
-@interface _Plant (CoreDataGeneratedAccessors)
+//- (BOOL)validateWaterPeriod:(id*)value_ error:(NSError**)error_;
 
 @end
 
 @interface _Plant (CoreDataGeneratedPrimitiveAccessors)
 
+- (NSDate*)primitiveDateCreated;
+- (void)setPrimitiveDateCreated:(NSDate*)value;
 
-- (NSDate*)primitivePlantDateAdded;
-- (void)setPrimitivePlantDateAdded:(NSDate*)value;
+- (NSDate*)primitiveDateWaterRefreshed;
+- (void)setPrimitiveDateWaterRefreshed:(NSDate*)value;
 
+- (NSData*)primitiveImage;
+- (void)setPrimitiveImage:(NSData*)value;
 
+- (NSString*)primitiveName;
+- (void)setPrimitiveName:(NSString*)value;
 
+- (NSString*)primitiveUid;
+- (void)setPrimitiveUid:(NSString*)value;
 
-- (NSNumber*)primitivePlantFertilizerPeriod;
-- (void)setPrimitivePlantFertilizerPeriod:(NSNumber*)value;
+- (NSNumber*)primitiveWaterPeriod;
+- (void)setPrimitiveWaterPeriod:(NSNumber*)value;
 
-- (int16_t)primitivePlantFertilizerPeriodValue;
-- (void)setPrimitivePlantFertilizerPeriodValue:(int16_t)value_;
-
-
-
-
-- (NSNumber*)primitivePlantId;
-- (void)setPrimitivePlantId:(NSNumber*)value;
-
-- (int16_t)primitivePlantIdValue;
-- (void)setPrimitivePlantIdValue:(int16_t)value_;
-
-
-
-
-- (NSString*)primitivePlantImageFilename;
-- (void)setPrimitivePlantImageFilename:(NSString*)value;
-
-
-
-
-- (NSNumber*)primitivePlantMistPeriod;
-- (void)setPrimitivePlantMistPeriod:(NSNumber*)value;
-
-- (int16_t)primitivePlantMistPeriodValue;
-- (void)setPrimitivePlantMistPeriodValue:(int16_t)value_;
-
-
-
-
-- (NSString*)primitivePlantName;
-- (void)setPrimitivePlantName:(NSString*)value;
-
-
-
-
-- (NSNumber*)primitivePlantWaterPeriod;
-- (void)setPrimitivePlantWaterPeriod:(NSNumber*)value;
-
-- (int16_t)primitivePlantWaterPeriodValue;
-- (void)setPrimitivePlantWaterPeriodValue:(int16_t)value_;
-
-
-
+- (int16_t)primitiveWaterPeriodValue;
+- (void)setPrimitiveWaterPeriodValue:(int16_t)value_;
 
 @end

@@ -10,7 +10,9 @@
 
 @interface RSCoreDataController : NSObject
 
-@property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
+@property (readonly) NSManagedObjectContext         *managedObjectContext;
+@property (readonly) NSManagedObjectModel           *managedObjectModel;
+@property (readonly) NSPersistentStoreCoordinator   *persistentStoreCoordinator;
 
 + (id)sharedController;
 

@@ -4,19 +4,12 @@
 #import "_Plant.h"
 
 const struct PlantAttributes PlantAttributes = {
-	.plantDateAdded = @"plantDateAdded",
-	.plantFertilizerPeriod = @"plantFertilizerPeriod",
-	.plantId = @"plantId",
-	.plantImageFilename = @"plantImageFilename",
-	.plantMistPeriod = @"plantMistPeriod",
-	.plantName = @"plantName",
-	.plantWaterPeriod = @"plantWaterPeriod",
-};
-
-const struct PlantRelationships PlantRelationships = {
-};
-
-const struct PlantFetchedProperties PlantFetchedProperties = {
+	.dateCreated = @"dateCreated",
+	.dateWaterRefreshed = @"dateWaterRefreshed",
+	.image = @"image",
+	.name = @"name",
+	.uid = @"uid",
+	.waterPeriod = @"waterPeriod",
 };
 
 @implementation PlantID
@@ -44,24 +37,9 @@ const struct PlantFetchedProperties PlantFetchedProperties = {
 
 + (NSSet*)keyPathsForValuesAffectingValueForKey:(NSString*)key {
 	NSSet *keyPaths = [super keyPathsForValuesAffectingValueForKey:key];
-	
-	if ([key isEqualToString:@"plantFertilizerPeriodValue"]) {
-		NSSet *affectingKey = [NSSet setWithObject:@"plantFertilizerPeriod"];
-		keyPaths = [keyPaths setByAddingObjectsFromSet:affectingKey];
-		return keyPaths;
-	}
-	if ([key isEqualToString:@"plantIdValue"]) {
-		NSSet *affectingKey = [NSSet setWithObject:@"plantId"];
-		keyPaths = [keyPaths setByAddingObjectsFromSet:affectingKey];
-		return keyPaths;
-	}
-	if ([key isEqualToString:@"plantMistPeriodValue"]) {
-		NSSet *affectingKey = [NSSet setWithObject:@"plantMistPeriod"];
-		keyPaths = [keyPaths setByAddingObjectsFromSet:affectingKey];
-		return keyPaths;
-	}
-	if ([key isEqualToString:@"plantWaterPeriodValue"]) {
-		NSSet *affectingKey = [NSSet setWithObject:@"plantWaterPeriod"];
+
+	if ([key isEqualToString:@"waterPeriodValue"]) {
+		NSSet *affectingKey = [NSSet setWithObject:@"waterPeriod"];
 		keyPaths = [keyPaths setByAddingObjectsFromSet:affectingKey];
 		return keyPaths;
 	}
@@ -69,137 +47,35 @@ const struct PlantFetchedProperties PlantFetchedProperties = {
 	return keyPaths;
 }
 
+@dynamic dateCreated;
 
+@dynamic dateWaterRefreshed;
 
+@dynamic image;
 
-@dynamic plantDateAdded;
+@dynamic name;
 
+@dynamic uid;
 
+@dynamic waterPeriod;
 
-
-
-
-@dynamic plantFertilizerPeriod;
-
-
-
-- (int16_t)plantFertilizerPeriodValue {
-	NSNumber *result = [self plantFertilizerPeriod];
+- (int16_t)waterPeriodValue {
+	NSNumber *result = [self waterPeriod];
 	return [result shortValue];
 }
 
-- (void)setPlantFertilizerPeriodValue:(int16_t)value_ {
-	[self setPlantFertilizerPeriod:[NSNumber numberWithShort:value_]];
+- (void)setWaterPeriodValue:(int16_t)value_ {
+	[self setWaterPeriod:@(value_)];
 }
 
-- (int16_t)primitivePlantFertilizerPeriodValue {
-	NSNumber *result = [self primitivePlantFertilizerPeriod];
+- (int16_t)primitiveWaterPeriodValue {
+	NSNumber *result = [self primitiveWaterPeriod];
 	return [result shortValue];
 }
 
-- (void)setPrimitivePlantFertilizerPeriodValue:(int16_t)value_ {
-	[self setPrimitivePlantFertilizerPeriod:[NSNumber numberWithShort:value_]];
+- (void)setPrimitiveWaterPeriodValue:(int16_t)value_ {
+	[self setPrimitiveWaterPeriod:@(value_)];
 }
-
-
-
-
-
-@dynamic plantId;
-
-
-
-- (int16_t)plantIdValue {
-	NSNumber *result = [self plantId];
-	return [result shortValue];
-}
-
-- (void)setPlantIdValue:(int16_t)value_ {
-	[self setPlantId:[NSNumber numberWithShort:value_]];
-}
-
-- (int16_t)primitivePlantIdValue {
-	NSNumber *result = [self primitivePlantId];
-	return [result shortValue];
-}
-
-- (void)setPrimitivePlantIdValue:(int16_t)value_ {
-	[self setPrimitivePlantId:[NSNumber numberWithShort:value_]];
-}
-
-
-
-
-
-@dynamic plantImageFilename;
-
-
-
-
-
-
-@dynamic plantMistPeriod;
-
-
-
-- (int16_t)plantMistPeriodValue {
-	NSNumber *result = [self plantMistPeriod];
-	return [result shortValue];
-}
-
-- (void)setPlantMistPeriodValue:(int16_t)value_ {
-	[self setPlantMistPeriod:[NSNumber numberWithShort:value_]];
-}
-
-- (int16_t)primitivePlantMistPeriodValue {
-	NSNumber *result = [self primitivePlantMistPeriod];
-	return [result shortValue];
-}
-
-- (void)setPrimitivePlantMistPeriodValue:(int16_t)value_ {
-	[self setPrimitivePlantMistPeriod:[NSNumber numberWithShort:value_]];
-}
-
-
-
-
-
-@dynamic plantName;
-
-
-
-
-
-
-@dynamic plantWaterPeriod;
-
-
-
-- (int16_t)plantWaterPeriodValue {
-	NSNumber *result = [self plantWaterPeriod];
-	return [result shortValue];
-}
-
-- (void)setPlantWaterPeriodValue:(int16_t)value_ {
-	[self setPlantWaterPeriod:[NSNumber numberWithShort:value_]];
-}
-
-- (int16_t)primitivePlantWaterPeriodValue {
-	NSNumber *result = [self primitivePlantWaterPeriod];
-	return [result shortValue];
-}
-
-- (void)setPrimitivePlantWaterPeriodValue:(int16_t)value_ {
-	[self setPrimitivePlantWaterPeriod:[NSNumber numberWithShort:value_]];
-}
-
-
-
-
-
-
-
-
-
 
 @end
+

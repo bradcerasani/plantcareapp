@@ -14,11 +14,4 @@
 
 @property (strong, nonatomic) Plant *plant;
 
-/**
- Deletes the image associated with the given plant object.
- @param plant The plant object from which the image will be deleted.
- @return YES if the image was deleted successfully, NO otherwise.
- */
-+ (BOOL)deleteImageForPlant:(Plant *)plant;
-
 @end

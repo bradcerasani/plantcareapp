@@ -13,11 +13,14 @@
 
 @interface PlantCollectionViewController () <NSFetchedResultsControllerDelegate, UICollectionViewDataSource, UICollectionViewDelegate>
 
-@property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
+@property (readonly) NSFetchedResultsController *fetchedResultsController;
 
 @end
 
-NSMutableArray *_objectChanges;
+NSMutableArray              *_objectChanges;
+NSFetchedResultsController  *_fetchedResultsController;
+
+NSString * const kFetchedResultsControllerCacheName = @"PlantCache";
 
 @implementation PlantCollectionViewController
 
@@ -56,20 +59,21 @@ NSMutableArray *_objectChanges;
     
     NSManagedObjectContext *context = [[RSCoreDataController sharedController] managedObjectContext];
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
-    // Edit the entity name as appropriate.
-    NSEntityDescription *plantEntity = [NSEntityDescription entityForName:kPlantEntityName
-                                              inManagedObjectContext:context];
+    NSEntityDescription *plantEntity = [NSEntityDescription entityForName:kPlantEntityName inManagedObjectContext:context];
     [fetchRequest setEntity:plantEntity];
     [fetchRequest setFetchBatchSize:20];
     
-    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"plantName" ascending:YES];
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"name" ascending:YES];
     NSArray *sortDescriptors = @[sortDescriptor];
     
     [fetchRequest setSortDescriptors:sortDescriptors];
 
-    NSFetchedResultsController *aFetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:context sectionNameKeyPath:nil cacheName:@"PlantCache"];
-    aFetchedResultsController.delegate = self;
-    self.fetchedResultsController = aFetchedResultsController;
+    NSFetchedResultsController *fetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest
+                                                                                                managedObjectContext:context
+                                                                                                  sectionNameKeyPath:nil
+                                                                                                           cacheName:kFetchedResultsControllerCacheName];
+    fetchedResultsController.delegate = self;
+    _fetchedResultsController = fetchedResultsController;
     return _fetchedResultsController;
 }
 
@@ -180,10 +184,8 @@ NSMutableArray *_objectChanges;
 - (UICollectionViewCell *)configureCell:(PlantCollectionViewCell *)cell forIndexPath:(NSIndexPath *)indexPath
 {
     Plant *plant = [_fetchedResultsController objectAtIndexPath:indexPath];
-    cell.plantNameLabel.text = plant.plantName;
-    cell.plantImageView.image = [plant imageForPlant];
-    cell.plantImageView.layer.cornerRadius = cell.plantImageView.frame.size.width / 2;
-    cell.plantImageView.layer.masksToBounds = YES;
+    [cell setName:plant.name];
+    [cell setImage:[UIImage imageWithData:plant.image]];
     return cell;
 }
 
@@ -193,15 +195,13 @@ NSMutableArray *_objectChanges;
 {
     if ([[segue identifier] isEqualToString:@"PlantDetailSegue"])
     {
-        Plant *plant = nil;
+        UINavigationController *navController = segue.destinationViewController;
+        PlantDetailsViewController *detailsViewController = (PlantDetailsViewController *)navController.topViewController;
         if ([sender isKindOfClass:[UICollectionViewCell class]])
         {
             UICollectionViewCell *cell = (UICollectionViewCell *)sender;
-            plant = [_fetchedResultsController objectAtIndexPath:[self.collectionView indexPathForCell:cell]];
+            detailsViewController.plant = [_fetchedResultsController objectAtIndexPath:[self.collectionView indexPathForCell:cell]];
         }
-        UINavigationController *navController = segue.destinationViewController;
-        PlantDetailsViewController *detailsViewController = (PlantDetailsViewController *)navController.topViewController;
-        detailsViewController.plant = plant;
     }
 }
 

@@ -10,7 +10,11 @@
 
 @interface PlantCollectionViewCell : UICollectionViewCell
 
-@property (weak, nonatomic) IBOutlet UIImageView *plantImageView;
-@property (weak, nonatomic) IBOutlet UILabel *plantNameLabel;
+@property (weak, nonatomic) IBOutlet UIImageView    *imageView;
+@property (weak, nonatomic) IBOutlet UILabel        *nameLabel;
+
+- (void)setName:(NSString *)name;
+
+- (void)setImage:(UIImage *)image;
 
 @end

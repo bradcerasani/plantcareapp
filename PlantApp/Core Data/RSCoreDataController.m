@@ -9,27 +9,39 @@
 
 @interface RSCoreDataController ()
 
-@property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;
-@property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
-
 @end
 
 @implementation RSCoreDataController
 
-@synthesize managedObjectContext = _managedObjectContext;
-@synthesize managedObjectModel = _managedObjectModel;
-@synthesize persistentStoreCoordinator = _persistentStoreCoordinator;
+NSManagedObjectContext          *_managedObjectContext;
+NSManagedObjectContext          *_backgroundContext;
+NSManagedObjectModel            *_managedObjectModel;
+NSPersistentStoreCoordinator    *_persistentStoreCoordinator;
 
 + (id)sharedController
 {
     static id sharedInstance = nil;
     static dispatch_once_t onceToken;
-    
     dispatch_once(&onceToken, ^{
         sharedInstance = [[self alloc] init];
     });
-    
     return sharedInstance;
+}
+
+- (id)init {
+    self = [super init];
+    if (self) {
+        NSPersistentStoreCoordinator *coordinator = [self persistentStoreCoordinator];
+        if (coordinator != nil) {
+            _managedObjectContext = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSMainQueueConcurrencyType];
+            [_managedObjectContext setPersistentStoreCoordinator:coordinator];
+            _backgroundContext = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSPrivateQueueConcurrencyType];
+            [_backgroundContext setPersistentStoreCoordinator:coordinator];
+        } else {
+#warning INCOMPLETE - Error handling
+        }
+    }
+    return self;
 }
 
 - (void)saveContext
@@ -39,7 +51,7 @@
     if (managedObjectContext != nil) {
         if ([managedObjectContext hasChanges] && ![managedObjectContext save:&error])
         {
-#warning CODE REVIEW - Use proper error handling
+#warning INCOMPLETE - Error handling
             NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
             abort();
         }
@@ -50,24 +62,7 @@
     }
 }
 
-#pragma mark - Core Data stack
-
-// Returns the managed object context for the application.
-// If the context doesn't already exist, it is created and bound to the persistent store coordinator for the application.
-- (NSManagedObjectContext *)managedObjectContext
-{
-    if (_managedObjectContext != nil)
-    {
-        return _managedObjectContext;
-    }
-
-    NSPersistentStoreCoordinator *coordinator = [self persistentStoreCoordinator];
-    if (coordinator != nil) {
-        _managedObjectContext = [[NSManagedObjectContext alloc] init];
-        [_managedObjectContext setPersistentStoreCoordinator:coordinator];
-    }
-    return _managedObjectContext;
-}
+#pragma mark - Property Overrides
 
 // Returns the managed object model for the application.
 // If the model doesn't already exist, it is created from the application's model.
@@ -102,12 +97,18 @@
                                                          options:@{NSMigratePersistentStoresAutomaticallyOption:@YES, NSInferMappingModelAutomaticallyOption:@YES}
                                                            error:&error])
     {
-#warning CODE REVIEW - Use proper error handling
+#warning INCOMPLETE - Error handling
         NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
         abort();
     }
 
     return _persistentStoreCoordinator;
+}
+
+#pragma mark - Notifications
+
+- (void)didReceiveManagedObjectContextDidSaveNotification:(NSNotification *)notification {
+    [self.managedObjectContext mergeChangesFromContextDidSaveNotification:notification];
 }
 
 #pragma mark - Application's Documents directory
