@@ -71,11 +71,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BA76492F1ABA2972006D21F2 /* DLogMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLogMacro.h; sourceTree = "<group>"; };
 		BEA07B1D18A82CC4005B3633 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		BEB56FE318B94C2200E30D88 /* EditPlantFeedingDetailsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditPlantFeedingDetailsView.h; sourceTree = "<group>"; };
 		BEB56FE418B94C2200E30D88 /* EditPlantFeedingDetailsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditPlantFeedingDetailsView.m; sourceTree = "<group>"; };
 		BEB56FE718B94D1B00E30D88 /* EditPlantFeedingDetailsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditPlantFeedingDetailsView.xib; sourceTree = "<group>"; };
-		BEB56FEA18B95AEB00E30D88 /* DLogMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLogMacro.h; sourceTree = "<group>"; };
 		BEDF2B0E189DB67500B20C80 /* PlantApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlantApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEDF2B11189DB67500B20C80 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		BEDF2B13189DB67500B20C80 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -155,6 +155,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BA76492E1ABA2972006D21F2 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				BA76492F1ABA2972006D21F2 /* DLogMacro.h */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
 		BEDF2B05189DB67500B20C80 = {
 			isa = PBXGroup;
 			children = (
@@ -192,8 +200,8 @@
 		BEDF2B17189DB67500B20C80 /* PlantApp */ = {
 			isa = PBXGroup;
 			children = (
-				BEB56FEA18B95AEB00E30D88 /* DLogMacro.h */,
 				BEE0EBCE18A6D9DE007F0F1C /* Core Data */,
+				BA76492E1ABA2972006D21F2 /* Util */,
 				BEE0EBBE18A6CE94007F0F1C /* Views */,
 				BEDF2B5D189DBE4B00B20C80 /* View Controllers */,
 				BEDF2B20189DB67500B20C80 /* AppDelegate.h */,
@@ -380,7 +388,7 @@
 		BEDF2B06189DB67500B20C80 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0500;
+				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = "Rudi Strahl";
 				TargetAttributes = {
 					BEDF2B0D189DB67500B20C80 = {
@@ -579,7 +587,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -619,7 +626,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -680,7 +686,6 @@
 		BEDF2B47189DB67500B20C80 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/PlantApp.app/PlantApp";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -703,7 +708,6 @@
 		BEDF2B48189DB67500B20C80 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/PlantApp.app/PlantApp";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",

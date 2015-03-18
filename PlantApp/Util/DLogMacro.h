@@ -1,6 +1,5 @@
 //
 //  DLogMacro.h
-//  A Tidy World
 //
 //  Created by Rudi Strahl on 12-04-10.
 //  Copyright (c) 2010 Rudi Strahl. All rights reserved.
