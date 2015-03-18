@@ -18,7 +18,7 @@
 
 - (NSString *)filenameForPlantImage
 {
-    NSString *uriRepresentation = [[self.objectID URIRepresentation] lastPathComponent];
+    NSString *uriRepresentation = [[(NSManagedObjectID *)self.objectID URIRepresentation] lastPathComponent];
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *documentsDirectory = [paths objectAtIndex:0];
     NSString *filename = [documentsDirectory stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.png", uriRepresentation]];

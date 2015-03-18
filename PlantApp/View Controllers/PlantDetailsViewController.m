@@ -111,12 +111,11 @@
     if (_plant == nil)
     {
         self.plant = [[RSCoreDataController sharedController] newPlantEntity];
-        _plant.plantDateAdded = [NSDate date];
+        _plant.lastUpdated = [NSDate date];
     }
     _plant.plantName = _plantNameTextField.text;
-    _plant.plantWaterPeriod = @(0);
-    _plant.plantMistPeriod = @(0);
-    _plant.plantFertilizerPeriod = @(0);
+    _plant.waterInterval = @(0);
+    _plant.fertilizerInterval = @(0);
     [[RSCoreDataController sharedController] saveContext];
     [self savePlantImage:self.plantImageView.image];
 }
@@ -214,7 +213,7 @@
     CGPoint buttonOrigin = [self.feedingDetailsView convertPoint:button.frame.origin toView:self.view];
     DLog(@"%f", buttonOrigin.y);
     CGFloat newX = (self.view.frame.size.width - self.editFeedingDetailsView.frame.size.width) / 2;
-    CGFloat newY = abs(buttonOrigin.y - self.editFeedingDetailsView.frame.size.height);
+    CGFloat newY = fabs(buttonOrigin.y - self.editFeedingDetailsView.frame.size.height);
     CGRect frame = self.editFeedingDetailsView.frame;
     frame.origin.x = newX;
     frame.origin.y = newY;
