@@ -95,12 +95,12 @@
     if (_plant == nil)
     {
         self.plant = [[RSCoreDataController sharedController] newPlantEntity];
-        _plant.plantDateAdded = [NSDate date];
+        _plant.lastUpdated = [NSDate date];
     }
     _plant.plantName = _plantNameTextField.text;
 #warning TODO: save actual data
-    _plant.plantWaterPeriod = @(0);
-    _plant.plantFertilizerPeriod = @(0);
+    _plant.waterInterval = @(0);
+    _plant.fertilizerInterval = @(0);
     [[RSCoreDataController sharedController] saveContext];
     [self savePlantImage:self.plantImageView.image];
 }

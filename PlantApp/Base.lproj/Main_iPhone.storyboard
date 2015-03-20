@@ -254,7 +254,6 @@
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="backgroundImageView" destination="0E9-kS-6ST" id="Qjt-ij-2pe"/>
-                        <outlet property="blurUnderlayView" destination="bD0-dW-1D5" id="xtr-P6-YIS"/>
                         <outlet property="cancelButton" destination="vcQ-3k-WLG" id="FF3-aQ-txc"/>
                         <outlet property="doneButton" destination="FhQ-gp-xTe" id="tPB-9Q-ElX"/>
                         <outlet property="feedingDetailsView" destination="o4y-Gu-5lh" id="FJg-VQ-CJJ"/>
