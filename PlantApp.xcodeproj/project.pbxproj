@@ -7,14 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BA5F89F71ABBE3D200760B7F /* RoundedImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = BA5F89F61ABBE3D200760B7F /* RoundedImageView.m */; };
 		BEA07B1E18A82CC4005B3633 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEA07B1D18A82CC4005B3633 /* MobileCoreServices.framework */; };
 		BEA07B1F18A82CCC005B3633 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEA07B1D18A82CC4005B3633 /* MobileCoreServices.framework */; };
-		BEB56FE518B94C2200E30D88 /* EditPlantFeedingDetailsView.m in Sources */ = {isa = PBXBuildFile; fileRef = BEB56FE418B94C2200E30D88 /* EditPlantFeedingDetailsView.m */; };
-		BEB56FE618B94C2200E30D88 /* EditPlantFeedingDetailsView.m in Sources */ = {isa = PBXBuildFile; fileRef = BEB56FE418B94C2200E30D88 /* EditPlantFeedingDetailsView.m */; };
-		BEB56FE818B94D1B00E30D88 /* EditPlantFeedingDetailsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BEB56FE718B94D1B00E30D88 /* EditPlantFeedingDetailsView.xib */; };
-		BEB56FE918B94D1B00E30D88 /* EditPlantFeedingDetailsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BEB56FE718B94D1B00E30D88 /* EditPlantFeedingDetailsView.xib */; };
-		BEB56FEC18B986CD00E30D88 /* EditPlantFeedingDetailsViewAlternate.xib in Resources */ = {isa = PBXBuildFile; fileRef = BEB56FEB18B986CD00E30D88 /* EditPlantFeedingDetailsViewAlternate.xib */; };
-		BEB56FED18B986CD00E30D88 /* EditPlantFeedingDetailsViewAlternate.xib in Resources */ = {isa = PBXBuildFile; fileRef = BEB56FEB18B986CD00E30D88 /* EditPlantFeedingDetailsViewAlternate.xib */; };
 		BEDF2B12189DB67500B20C80 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEDF2B11189DB67500B20C80 /* Foundation.framework */; };
 		BEDF2B14189DB67500B20C80 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEDF2B13189DB67500B20C80 /* CoreGraphics.framework */; };
 		BEDF2B16189DB67500B20C80 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEDF2B15189DB67500B20C80 /* UIKit.framework */; };
@@ -73,12 +68,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BA5F89F51ABBE3D200760B7F /* RoundedImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoundedImageView.h; sourceTree = "<group>"; };
+		BA5F89F61ABBE3D200760B7F /* RoundedImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoundedImageView.m; sourceTree = "<group>"; };
 		BEA07B1D18A82CC4005B3633 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
-		BEB56FE318B94C2200E30D88 /* EditPlantFeedingDetailsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditPlantFeedingDetailsView.h; sourceTree = "<group>"; };
-		BEB56FE418B94C2200E30D88 /* EditPlantFeedingDetailsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditPlantFeedingDetailsView.m; sourceTree = "<group>"; };
-		BEB56FE718B94D1B00E30D88 /* EditPlantFeedingDetailsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditPlantFeedingDetailsView.xib; sourceTree = "<group>"; };
 		BEB56FEA18B95AEB00E30D88 /* DLogMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLogMacro.h; sourceTree = "<group>"; };
-		BEB56FEB18B986CD00E30D88 /* EditPlantFeedingDetailsViewAlternate.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditPlantFeedingDetailsViewAlternate.xib; sourceTree = "<group>"; };
 		BEDF2B0E189DB67500B20C80 /* PlantApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlantApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEDF2B11189DB67500B20C80 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		BEDF2B13189DB67500B20C80 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -265,10 +258,8 @@
 			children = (
 				BEE0EBBF18A6CEAD007F0F1C /* PlantCollectionViewCell.h */,
 				BEE0EBC018A6CEAD007F0F1C /* PlantCollectionViewCell.m */,
-				BEB56FE318B94C2200E30D88 /* EditPlantFeedingDetailsView.h */,
-				BEB56FE418B94C2200E30D88 /* EditPlantFeedingDetailsView.m */,
-				BEB56FE718B94D1B00E30D88 /* EditPlantFeedingDetailsView.xib */,
-				BEB56FEB18B986CD00E30D88 /* EditPlantFeedingDetailsViewAlternate.xib */,
+				BA5F89F51ABBE3D200760B7F /* RoundedImageView.h */,
+				BA5F89F61ABBE3D200760B7F /* RoundedImageView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -425,8 +416,6 @@
 			files = (
 				BEE0EBC418A6D156007F0F1C /* missing_image@2x.png in Resources */,
 				BEDF2B28189DB67500B20C80 /* Main_iPad.storyboard in Resources */,
-				BEB56FE818B94D1B00E30D88 /* EditPlantFeedingDetailsView.xib in Resources */,
-				BEB56FEC18B986CD00E30D88 /* EditPlantFeedingDetailsViewAlternate.xib in Resources */,
 				BEDF2B2D189DB67500B20C80 /* Images.xcassets in Resources */,
 				BEDF2B25189DB67500B20C80 /* Main_iPhone.storyboard in Resources */,
 				BEDF2B1C189DB67500B20C80 /* InfoPlist.strings in Resources */,
@@ -447,8 +436,6 @@
 			files = (
 				BEE0EBC518A6D156007F0F1C /* missing_image@2x.png in Resources */,
 				BEDF2B53189DB68E00B20C80 /* Main_iPad.storyboard in Resources */,
-				BEB56FE918B94D1B00E30D88 /* EditPlantFeedingDetailsView.xib in Resources */,
-				BEB56FED18B986CD00E30D88 /* EditPlantFeedingDetailsViewAlternate.xib in Resources */,
 				BEDF2B54189DB68E00B20C80 /* Images.xcassets in Resources */,
 				BEDF2B55189DB68E00B20C80 /* Main_iPhone.storyboard in Resources */,
 				BEDF2B56189DB68E00B20C80 /* InfoPlist.strings in Resources */,
@@ -498,8 +485,8 @@
 				BEE0EBEA18A6E5E7007F0F1C /* _Plant.m in Sources */,
 				BEE0EBDC18A6E0A2007F0F1C /* RSCoreDataController+PlantApp.m in Sources */,
 				BEE0EBD518A6DA28007F0F1C /* Constants.m in Sources */,
+				BA5F89F71ABBE3D200760B7F /* RoundedImageView.m in Sources */,
 				BEE0EBD118A6D9E9007F0F1C /* RSCoreDataController.m in Sources */,
-				BEB56FE518B94C2200E30D88 /* EditPlantFeedingDetailsView.m in Sources */,
 				BEDF2B1E189DB67500B20C80 /* main.m in Sources */,
 				BEDF2B64189DBF0500B20C80 /* PlantDetailsViewController.m in Sources */,
 				BEE0EBCC18A6D7D9007F0F1C /* PlantAppModel.xcdatamodeld in Sources */,
@@ -526,7 +513,6 @@
 				BEE0EBDD18A6E0A2007F0F1C /* RSCoreDataController+PlantApp.m in Sources */,
 				BEE0EBD618A6DA28007F0F1C /* Constants.m in Sources */,
 				BEE0EBD218A6D9E9007F0F1C /* RSCoreDataController.m in Sources */,
-				BEB56FE618B94C2200E30D88 /* EditPlantFeedingDetailsView.m in Sources */,
 				BEDF2B4D189DB68E00B20C80 /* main.m in Sources */,
 				BEDF2B65189DBF0500B20C80 /* PlantDetailsViewController.m in Sources */,
 				BEE0EBCD18A6D7D9007F0F1C /* PlantAppModel.xcdatamodeld in Sources */,

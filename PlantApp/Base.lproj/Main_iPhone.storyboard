@@ -2,6 +2,8 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="KmJ-5H-Q9T">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -19,7 +21,7 @@
             </objects>
             <point key="canvasLocation" x="-448" y="25"/>
         </scene>
-        <!--<MISSING>-->
+        <!--Plants-->
         <scene sceneID="Rcm-iR-O81">
             <objects>
                 <collectionViewController storyboardIdentifier="PlantCollection" autoresizesArchivedViewToFullSize="NO" id="Ji7-dr-V9B" customClass="PlantCollectionViewController" sceneMemberID="viewController">
@@ -79,7 +81,7 @@
                             <outlet property="delegate" destination="Ji7-dr-V9B" id="MoZ-20-CzD"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" title="&lt;MISSING&gt;" id="XFz-AQ-KWX">
+                    <navigationItem key="navigationItem" title="Plants" id="XFz-AQ-KWX">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="iIw-qK-G6I">
                             <connections>
                                 <segue destination="MDk-4s-hgp" kind="modal" identifier="PlantDetailSegue" id="Nq4-CA-fRV"/>
@@ -104,22 +106,17 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kRO-Fa-nHK" userLabel="Plant Identity View">
-                                <rect key="frame" x="0.0" y="64" width="320" height="200"/>
+                                <rect key="frame" x="0.0" y="64" width="320" height="240"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0E9-kS-6ST" userLabel="Background Image">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="240"/>
                                         <color key="backgroundColor" red="0.90196079015731812" green="0.90196079015731812" blue="0.90196079015731812" alpha="1" colorSpace="calibratedRGB"/>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iVR-pp-5QB">
-                                        <rect key="frame" x="100" y="16" width="120" height="120"/>
-                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                    </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jg5-tm-1pU" userLabel="Add Photo Button">
-                                        <rect key="frame" x="100" y="16" width="120" height="120"/>
+                                        <rect key="frame" x="87" y="24" width="146" height="146"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="120" id="RHl-Ig-ETK"/>
-                                            <constraint firstAttribute="width" constant="120" id="YNj-iH-tYi"/>
+                                            <constraint firstAttribute="width" secondItem="Jg5-tm-1pU" secondAttribute="height" multiplier="1:1" id="wgL-rg-9ib"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <state key="normal" title="Photo">
@@ -130,7 +127,7 @@
                                         </connections>
                                     </button>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Plant Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Svf-zb-mxi" userLabel="Plant Name TextView">
-                                        <rect key="frame" x="60" y="154" width="200" height="30"/>
+                                        <rect key="frame" x="60" y="194" width="200" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="200" id="7IS-ka-Avc"/>
                                             <constraint firstAttribute="height" constant="30" id="J1Q-K3-Ktx"/>
@@ -142,13 +139,17 @@
                                             <outlet property="delegate" destination="pxl-gS-O7S" id="Vls-VY-ewi"/>
                                         </connections>
                                     </textField>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="missing_image@2x.png" translatesAutoresizingMaskIntoConstraints="NO" id="iVR-pp-5QB" customClass="RoundedImageView">
+                                        <rect key="frame" x="87" y="24" width="146" height="146"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="0rB-pw-3dW"/>
                                     <constraint firstItem="0E9-kS-6ST" firstAttribute="top" secondItem="kRO-Fa-nHK" secondAttribute="top" id="14r-PS-ORw"/>
                                     <constraint firstAttribute="trailing" secondItem="0E9-kS-6ST" secondAttribute="trailing" id="6bs-39-gNH"/>
                                     <constraint firstItem="iVR-pp-5QB" firstAttribute="width" secondItem="Jg5-tm-1pU" secondAttribute="width" id="G53-JN-vON"/>
+                                    <constraint firstItem="Svf-zb-mxi" firstAttribute="top" secondItem="Jg5-tm-1pU" secondAttribute="bottom" constant="24" id="SmJ-wJ-Gio"/>
                                     <constraint firstItem="iVR-pp-5QB" firstAttribute="height" secondItem="Jg5-tm-1pU" secondAttribute="height" id="i27-xc-gIv"/>
                                     <constraint firstAttribute="centerX" secondItem="Svf-zb-mxi" secondAttribute="centerX" id="mBX-4N-K6m"/>
                                     <constraint firstItem="0E9-kS-6ST" firstAttribute="leading" secondItem="kRO-Fa-nHK" secondAttribute="leading" id="n2Z-r3-ZSN"/>
@@ -157,72 +158,77 @@
                                     <constraint firstItem="iVR-pp-5QB" firstAttribute="top" secondItem="Jg5-tm-1pU" secondAttribute="top" id="qac-Ky-UHg"/>
                                     <constraint firstAttribute="bottom" secondItem="0E9-kS-6ST" secondAttribute="bottom" id="sRT-Gr-HmM"/>
                                     <constraint firstItem="iVR-pp-5QB" firstAttribute="leading" secondItem="Jg5-tm-1pU" secondAttribute="leading" id="xAR-ST-9Vm"/>
-                                    <constraint firstItem="Jg5-tm-1pU" firstAttribute="top" secondItem="kRO-Fa-nHK" secondAttribute="top" constant="16" id="xiU-pN-AS8"/>
+                                    <constraint firstItem="Jg5-tm-1pU" firstAttribute="top" secondItem="kRO-Fa-nHK" secondAttribute="top" constant="24" id="xiU-pN-AS8"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o4y-Gu-5lh" userLabel="Feeding Details View">
-                                <rect key="frame" x="0.0" y="264" width="320" height="216"/>
+                                <rect key="frame" x="0.0" y="304" width="320" height="176"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pXt-dN-dC0" userLabel="Water Button">
-                                        <rect key="frame" x="120" y="72" width="80" height="72"/>
-                                        <color key="backgroundColor" red="0.80000001192092896" green="0.80000001192092896" blue="0.80000001192092896" alpha="1" colorSpace="calibratedRGB"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jQq-LN-dDP" userLabel="Water View">
+                                        <rect key="frame" x="0.0" y="0.0" width="160" height="176"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pXt-dN-dC0" userLabel="Water Button">
+                                                <rect key="frame" x="40" y="38" width="100" height="100"/>
+                                                <color key="backgroundColor" red="0.80000001192092896" green="0.80000001192092896" blue="0.80000001192092896" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="pXt-dN-dC0" secondAttribute="height" multiplier="1:1" id="3x4-M2-UfG"/>
+                                                </constraints>
+                                                <state key="normal" title="Water">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="onWaterButtonTap:" destination="pxl-gS-O7S" eventType="touchUpInside" id="EqH-cx-X5t"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="72" placeholder="YES" id="OPJ-jc-8xg"/>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="72" id="SLp-qg-GhM"/>
+                                            <constraint firstAttribute="trailing" secondItem="pXt-dN-dC0" secondAttribute="trailing" constant="20" id="Od6-ZR-SfP"/>
+                                            <constraint firstAttribute="centerY" secondItem="pXt-dN-dC0" secondAttribute="centerY" id="Yhc-xY-XR9"/>
+                                            <constraint firstItem="pXt-dN-dC0" firstAttribute="leading" secondItem="jQq-LN-dDP" secondAttribute="leading" constant="40" id="hUA-lC-1Kz"/>
                                         </constraints>
-                                        <state key="normal" title="Water">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="onWaterButtonTap:" destination="pxl-gS-O7S" eventType="touchUpInside" id="EqH-cx-X5t"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ygN-gi-Kvh" userLabel="Mist Button">
-                                        <rect key="frame" x="20" y="72" width="80" height="72"/>
-                                        <color key="backgroundColor" red="0.80000001192092896" green="0.80000001192092896" blue="0.80000001192092896" alpha="1" colorSpace="calibratedRGB"/>
-                                        <state key="normal" title="Mist">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="onMistButtonTap:" destination="pxl-gS-O7S" eventType="touchUpInside" id="hSj-5D-6AH"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qby-Kc-kXd" userLabel="Fertilizer Button">
-                                        <rect key="frame" x="219" y="72" width="81" height="72"/>
-                                        <color key="backgroundColor" red="0.80000001192092896" green="0.80000001192092896" blue="0.80000001192092896" alpha="1" colorSpace="calibratedRGB"/>
-                                        <state key="normal" title="Fertilize">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="onFertilizerButtonTap:" destination="pxl-gS-O7S" eventType="touchUpInside" id="20u-cf-1Tc"/>
-                                        </connections>
-                                    </button>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Feeding Details" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o59-YD-OAy">
-                                        <rect key="frame" x="20" y="20" width="280" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GOT-GL-iO7" userLabel="Fertilizer View">
+                                        <rect key="frame" x="160" y="0.0" width="160" height="176"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qby-Kc-kXd" userLabel="Fertilizer Button">
+                                                <rect key="frame" x="20" y="38" width="100" height="100"/>
+                                                <color key="backgroundColor" red="0.80000001192092896" green="0.80000001192092896" blue="0.80000001192092896" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="Qby-Kc-kXd" secondAttribute="height" multiplier="1:1" id="LtV-Pq-Uae"/>
+                                                </constraints>
+                                                <state key="normal" title="Fertilize">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="onFertilizerButtonTap:" destination="pxl-gS-O7S" eventType="touchUpInside" id="20u-cf-1Tc"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="Qby-Kc-kXd" secondAttribute="trailing" constant="40" id="09V-Im-lpN"/>
+                                            <constraint firstAttribute="centerY" secondItem="Qby-Kc-kXd" secondAttribute="centerY" id="KZP-NT-cfv"/>
+                                            <constraint firstItem="Qby-Kc-kXd" firstAttribute="leading" secondItem="GOT-GL-iO7" secondAttribute="leading" constant="20" id="MdF-gU-oVM"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="pXt-dN-dC0" firstAttribute="height" secondItem="ygN-gi-Kvh" secondAttribute="height" id="Ezf-Zj-olP"/>
-                                    <constraint firstAttribute="trailing" secondItem="Qby-Kc-kXd" secondAttribute="trailing" constant="20" id="RcB-6U-tKU"/>
-                                    <constraint firstItem="pXt-dN-dC0" firstAttribute="leading" secondItem="ygN-gi-Kvh" secondAttribute="trailing" constant="20" id="Rkn-Z6-M3v"/>
-                                    <constraint firstItem="pXt-dN-dC0" firstAttribute="width" secondItem="Qby-Kc-kXd" secondAttribute="width" id="RmW-9p-fC8"/>
-                                    <constraint firstAttribute="centerY" secondItem="Qby-Kc-kXd" secondAttribute="centerY" id="ZcB-f1-dT6"/>
-                                    <constraint firstAttribute="centerY" secondItem="ygN-gi-Kvh" secondAttribute="centerY" id="dSz-DP-9i3"/>
-                                    <constraint firstItem="Qby-Kc-kXd" firstAttribute="leading" secondItem="pXt-dN-dC0" secondAttribute="trailing" constant="20" id="dTK-MJ-OEE"/>
-                                    <constraint firstItem="ygN-gi-Kvh" firstAttribute="leading" secondItem="o4y-Gu-5lh" secondAttribute="leading" constant="20" id="ecW-mS-1FY"/>
-                                    <constraint firstAttribute="centerY" secondItem="pXt-dN-dC0" secondAttribute="centerY" id="gRv-ZC-OFb"/>
-                                    <constraint firstAttribute="centerX" secondItem="pXt-dN-dC0" secondAttribute="centerX" id="n1G-dM-tOn"/>
-                                    <constraint firstItem="pXt-dN-dC0" firstAttribute="width" secondItem="ygN-gi-Kvh" secondAttribute="width" id="yHi-TT-fIW"/>
-                                    <constraint firstItem="pXt-dN-dC0" firstAttribute="height" secondItem="Qby-Kc-kXd" secondAttribute="height" id="yco-rS-D1c"/>
+                                    <constraint firstAttribute="bottom" secondItem="jQq-LN-dDP" secondAttribute="bottom" id="Ouh-PR-Nyw"/>
+                                    <constraint firstItem="jQq-LN-dDP" firstAttribute="top" secondItem="o4y-Gu-5lh" secondAttribute="top" id="TsG-9H-CZh"/>
+                                    <constraint firstItem="jQq-LN-dDP" firstAttribute="width" secondItem="o4y-Gu-5lh" secondAttribute="width" multiplier="0.5" id="VFg-5A-0q5"/>
+                                    <constraint firstItem="GOT-GL-iO7" firstAttribute="top" secondItem="o4y-Gu-5lh" secondAttribute="top" id="VPc-6r-EEO"/>
+                                    <constraint firstItem="jQq-LN-dDP" firstAttribute="leading" secondItem="o4y-Gu-5lh" secondAttribute="leading" id="YLU-yu-ncW"/>
+                                    <constraint firstItem="GOT-GL-iO7" firstAttribute="width" secondItem="o4y-Gu-5lh" secondAttribute="width" multiplier="0.5" id="hLn-i8-vtN"/>
+                                    <constraint firstAttribute="trailing" secondItem="GOT-GL-iO7" secondAttribute="trailing" id="kBd-Lt-UJY"/>
+                                    <constraint firstAttribute="bottom" secondItem="GOT-GL-iO7" secondAttribute="bottom" id="yaE-EV-X1C"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="kRO-Fa-nHK" firstAttribute="height" secondItem="UuB-c8-vud" secondAttribute="height" multiplier="0.5" id="3Wg-Xk-PL1"/>
                             <constraint firstItem="o4y-Gu-5lh" firstAttribute="leading" secondItem="UuB-c8-vud" secondAttribute="leading" id="CF3-vg-gvi"/>
                             <constraint firstAttribute="trailing" secondItem="kRO-Fa-nHK" secondAttribute="trailing" id="JWl-Ao-jVg"/>
                             <constraint firstItem="o4y-Gu-5lh" firstAttribute="top" secondItem="kRO-Fa-nHK" secondAttribute="bottom" id="a2s-ES-Ikv"/>
@@ -253,7 +259,6 @@
                         <outlet property="doneButton" destination="FhQ-gp-xTe" id="tPB-9Q-ElX"/>
                         <outlet property="feedingDetailsView" destination="o4y-Gu-5lh" id="FJg-VQ-CJJ"/>
                         <outlet property="fertilizerButton" destination="Qby-Kc-kXd" id="SLX-P6-WDV"/>
-                        <outlet property="mistButton" destination="ygN-gi-Kvh" id="zGa-3P-Bdo"/>
                         <outlet property="photoButton" destination="Jg5-tm-1pU" id="lbf-aj-CWZ"/>
                         <outlet property="plantIdentityView" destination="kRO-Fa-nHK" id="pLN-jn-bCH"/>
                         <outlet property="plantImageView" destination="iVR-pp-5QB" id="7JJ-CN-jgL"/>
@@ -288,6 +293,7 @@
     </scenes>
     <resources>
         <image name="missing_image.png" width="64" height="64"/>
+        <image name="missing_image@2x.png" width="0.0" height="0.0"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
